@@ -1,0 +1,902 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- Contact
+ - Contact Container
+  - Contact Left
+   - Contact Info
+    - Info Content
+     - Contact Social
+      - Social Icon
+       - Img
+      - Social Icon Middle
+     - Info Container
+      - Info Heading
+       - H3
+      - Info Text Area
+       - A 
+       - H3
+     - Info Container Margin
+     - Info Container Margin Bottom
+  - Contact Right
+   - Form
+    - Form Container
+     - Data Button
+      - Button Area
+      - Field Button
+      - Field Message
+      - Mozilla, Placeholder
+     - Form Margin
+     - Messages
+      - Error 
+      - Submitted
+ - Question
+  - H3
+ - Reach
+  - H1
+- Media Queries
+ - Max Width - 325px
+ - Other Screen Sizes
+
+*/
+
+
+// Section (Contact)
+.contact
+{
+    width:84%;
+    // Section container
+    .contactContainer 
+    {
+        margin-top:62px;
+        // Left area
+        .contactLeft
+        {
+            height:100%;
+            // Left area container
+            .contactInfo 
+            {
+                align-items:center;
+                background:$contactInfo;
+                border-radius:10px;
+                display:flex;
+                height:619px;
+                width:85%;
+                // Subcontainer - left area
+                .infoContent 
+                {
+                    margin:0 0 0 11%;
+                    width:100%;
+                    // Container - social icons
+                    .contactSocial 
+                    {
+                        display:inline;
+                        // Social icons
+                        .socialIcon
+                        {
+                            display:inline-block;
+                            margin:0;
+                            padding:0;
+                            // Social icons - img
+                            img 
+                            {
+                                height:auto;
+                                width:61px;
+                            }
+                        }
+                        // Middle social icon (Instagram)
+                        .socialIconMiddle 
+                        {
+                            margin:0 5px 0 5px;
+                        }
+                    }
+                    // Container for information - Address, web, etc.
+                    .infoContainer 
+                    {
+                        // Container for heading (Address, web, etc.)
+                        .infoHeading 
+                        {
+                            // Text
+                            h3 
+                            {
+                                font-family:rajdhaniBold;
+                            }
+                        }
+
+                        // Information - below the small headings (Address, web, etc.)
+                        .infoTextArea 
+                        {
+                            a 
+                            {
+                                color:$contactInfoText;
+                                font-family:rajdhaniBold;
+                                font-size:30px;
+                                margin:0;
+                                padding:0;
+                            }
+                            h3 
+                            {
+                                color:$contactInfoText;
+                                font-family:rajdhaniBold;
+                            }
+                        }
+                    }
+                    .infoContainerMargin 
+                    {
+                        margin:43px 0 0 0;
+                    }
+                    .infoContainerMarginBottom
+                    {
+                        margin-bottom:43px;
+                    }
+                }
+            }
+        }
+        // Right side
+        .contactRight 
+        {
+            // Contact form
+            form 
+            {
+                .formContainer 
+                {
+                    .dataButton 
+                    {
+                        .buttonArea 
+                        {
+                            padding:15px 0 15px 0 !important;
+                            width:56% !important;
+                        }
+                        .fieldButton 
+                        {
+                            background:transparent;
+                            border:1px solid $fieldBorder;
+                            border-radius:5px;
+                            color:$white;
+                            font-family:rajdhaniRegular;
+                            font-size:30px;
+                            margin:0;
+                            outline:none;
+                            padding:15px 0 15px 13%;
+                            width:92%;
+                            &:hover 
+                            {
+                                border-color:$menuHover;
+                            }
+                        }
+                        .fieldMessage 
+                        {
+                            height:366px;
+                            padding:30px 0 30px 6.5%;
+                            width:100%;
+                        }
+                        ::-moz-placeholder 
+                        {
+                            color:$white;
+                            opacity:1;
+                        }
+                    }
+                    .formMargin 
+                    {
+                        margin:40px 0 0 0;
+                    }
+                    .msgs 
+                    {
+                        margin:10px 0 0 0;
+                        padding:0;
+                        .error 
+                        {
+                            background:$contactError;
+                            color:$black;
+                            font-family:blinkerRegular;
+                            font-size:20px;
+                            padding:0;
+                            text-align:center;
+                        }
+                        .submitted 
+                        {
+                            background:$contactSubmitted;
+                            color:$black;
+                            font-family:blinkerRegular;
+                            font-size:20px;
+                            padding:0;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Text on the top (Reach Us, You have a question for us?)
+    .question 
+    {
+        margin-top:21px;
+        h3 
+        {
+            font-family:rajdhaniBold;
+        }
+    }
+    .reach 
+    {
+        h1 
+        {
+            font-family:rajdhaniBold;
+            font-size:40px;
+            margin:0;
+            padding:0;
+            text-align:start;
+        }
+    }
+}
+
+
+// Screen size - max width: 325px
+@media (max-width:325px)
+{
+    .contact 
+    {
+        .contactContainer 
+        {
+            .contactRight 
+            {
+                form 
+                {
+                    margin:0;
+                    padding:0;
+                    .formContainer 
+                    {
+                        margin:0;
+                        padding:0;
+                        .dataButton 
+                        {
+                            width:100%;
+                            .fieldButton 
+                            {
+                                width:100%;
+                            }
+                        }
+                        .formMarginResponsive 
+                        {
+                            margin:40px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (max-width:450px) 
+{
+    .contact 
+    {
+        .contactContainer 
+        {
+            .contactLeft 
+            {
+                .contactInfo 
+                {
+                    .infoContent 
+                    {
+                        .contactSocial 
+                        {
+                            .socialIcon 
+                            {
+                                img 
+                                {
+                                    height:auto;
+                                    width:55px;
+                                }
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoHeading 
+                            {
+                                h3 
+                                {
+                                    font-size:22px;
+                                }
+                            }
+                            .infoTextArea 
+                            {
+                                div 
+                                {
+                                    h3 
+                                    {
+                                        font-size:22px;
+                                        a 
+                                        {
+                                            font-size:22px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:500px) 
+{
+    .contact 
+    {
+        .contactContainer 
+        {
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                width:56%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:501px) and (max-width:1400px) 
+{
+    .contact 
+    {
+        .contactContainer 
+        {
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                width:28% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px)
+{
+    .contact 
+    {
+        .contactContainer 
+        {
+            .contactLeft 
+            {
+                margin:106px 0 0 0;
+                .contactInfo 
+                {
+                    height:initial;
+                    padding:25px 0 25px 0;
+                    width:100%;
+                    .infoContent 
+                    {
+                        margin:0;
+                        .contactSocial 
+                        {
+                            display:flex;
+                            justify-content:center;
+                            width:100%;
+                            div 
+                            {
+                                .socialIconMiddle 
+                                {
+                                    margin:0;
+                                }
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoHeading 
+                            {
+                                display:flex;
+                                justify-content:center;
+                                h3 
+                                {
+                                    text-align:center;
+                                }
+                            }
+                            .infoTextArea 
+                            {
+                                div 
+                                {
+                                    display:flex;
+                                    justify-content:center;
+                                    h3 
+                                    {
+                                        text-align:center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .question 
+        {
+            display:flex;
+            justify-content:center;
+            width:100%;
+            h3 
+            {
+                display:inline-block;
+                text-align:center;
+            }
+        }
+        .reach 
+        {
+            h1 
+            {
+                text-align:center;
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px) 
+{
+    .contact
+    {
+        .contactContainer 
+        {
+            margin-top:77px;
+            .contactLeft
+            {
+                .contactInfo 
+                {
+                    border-radius:12.5px;
+                    height:899px;
+                    .infoContent 
+                    {
+                        .contactSocial 
+                        {
+                            .socialIcon
+                            {
+                                img 
+                                {
+                                    height:auto;
+                                    width:76px;
+                                }
+                            }
+                            .socialIconMiddle 
+                            {
+                                margin:0 6.2px 0 6.2px;
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoTextArea 
+                            {
+                                a 
+                                {
+                                    font-size:37px;
+                                }
+                            }
+                        }
+                        .infoContainerMargin 
+                        {
+                            margin:53px 0 0 0;
+                        }
+                        .infoContainerMarginBottom
+                        {
+                            margin-bottom:53px;
+                        }
+                    }
+                }
+            }
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                padding:18px 0 18px 0 !important;
+                            }
+                            .fieldButton 
+                            {
+                                border:1.25px solid $fieldBorder;
+                                border-radius:6.2px;
+                                font-size:37px;
+                                padding:18px 0 18px 13%;
+                            }
+                            .fieldMessage 
+                            {
+                                height:458px;
+                                padding:37px 0 37px 6.5%;
+                            }
+                        }
+                        .formMargin 
+                        {
+                            margin:50px 0 0 0;
+                        }
+                        .msgs 
+                        {
+                            margin:12.5px 0 0 0;
+                            .error 
+                            {
+                                font-size:25px;
+                            }
+                            .submitted 
+                            {
+                                font-size:25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .question 
+        {
+            margin-top:26px;
+        }
+        .reach 
+        {
+            h1 
+            {
+                font-size:50px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px) 
+{
+    .contact
+    {
+        .contactContainer 
+        {
+            margin-top:96px;
+            .contactLeft
+            {
+                .contactInfo 
+                {
+                    border-radius:15.6px;
+                    height:1124px;
+                    .infoContent 
+                    {
+                        .contactSocial 
+                        {
+                            .socialIcon
+                            {
+                                img 
+                                {
+                                    height:auto;
+                                    width:95px;
+                                }
+                            }
+                            .socialIconMiddle 
+                            {
+                                margin:0 7.7px 0 7.7px;
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoTextArea 
+                            {
+                                a 
+                                {
+                                    font-size:46px;
+                                }
+                            }
+                        }
+                        .infoContainerMargin 
+                        {
+                            margin:66px 0 0 0;
+                        }
+                        .infoContainerMarginBottom
+                        {
+                            margin-bottom:66px;
+                        }
+                    }
+                }
+            }
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                padding:22px 0 22px 0 !important;
+                            }
+                            .fieldButton 
+                            {
+                                border:1.56px solid $fieldBorder;
+                                border-radius:7.7px;
+                                font-size:46px;
+                                padding:22px 0 22px 13%;
+                            }
+                            .fieldMessage 
+                            {
+                                height:573px;
+                                padding:46px 0 46px 6.5%;
+                            }
+                        }
+                        .formMargin 
+                        {
+                            margin:62px 0 0 0;
+                        }
+                        .msgs 
+                        {
+                            margin:15.6px 0 0 0;
+                            .error 
+                            {
+                                font-size:31px;
+                            }
+                            .submitted 
+                            {
+                                font-size:31px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .question 
+        {
+            margin-top:32px;
+        }
+        .reach 
+        {
+            h1 
+            {
+                font-size:62px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px) 
+{
+    .contact
+    {
+        .contactContainer 
+        {
+            margin-top:120px;
+            .contactLeft
+            {
+                .contactInfo 
+                {
+                    border-radius:19.5px;
+                    height:1405px;
+                    .infoContent 
+                    {
+                        .contactSocial 
+                        {
+                            .socialIcon
+                            {
+                                img 
+                                {
+                                    height:auto;
+                                    width:118px;
+                                }
+                            }
+                            .socialIconMiddle 
+                            {
+                                margin:0 9.6px 0 9.6px;
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoTextArea 
+                            {
+                                a 
+                                {
+                                    font-size:57px;
+                                }
+                            }
+                        }
+                        .infoContainerMargin 
+                        {
+                            margin:82px 0 0 0;
+                        }
+                        .infoContainerMarginBottom
+                        {
+                            margin-bottom:82px;
+                        }
+                    }
+                }
+            }
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                padding:27px 0 27px 0 !important;
+                            }
+                            .fieldButton 
+                            {
+                                border:1.95px solid $fieldBorder;
+                                border-radius:9.6px;
+                                font-size:57px;
+                                padding:27px 0 27px 13%;
+                            }
+                            .fieldMessage 
+                            {
+                                height:716px;
+                                padding:57px 0 57px 6.5%;
+                            }
+                        }
+                        .formMargin 
+                        {
+                            margin:77px 0 0 0;
+                        }
+                        .msgs 
+                        {
+                            margin:19.5px 0 0 0;
+                            .error 
+                            {
+                                font-size:38px;
+                            }
+                            .submitted 
+                            {
+                                font-size:38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .question 
+        {
+            margin-top:40px;
+        }
+        .reach 
+        {
+            h1 
+            {
+                font-size:77px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px)
+{
+    .contact
+    {
+        .contactContainer 
+        {
+            margin-top:150px;
+            .contactLeft
+            {
+                .contactInfo 
+                {
+                    border-radius:24.3px;
+                    height:1756px;
+                    .infoContent 
+                    {
+                        .contactSocial 
+                        {
+                            .socialIcon
+                            {
+                                img 
+                                {
+                                    height:auto;
+                                    width:147px;
+                                }
+                            }
+                            .socialIconMiddle 
+                            {
+                                margin:0 12px 0 12px;
+                            }
+                        }
+                        .infoContainer 
+                        {
+                            .infoTextArea 
+                            {
+                                a 
+                                {
+                                    font-size:71px;
+                                }
+                            }
+                        }
+                        .infoContainerMargin 
+                        {
+                            margin:103px 0 0 0;
+                        }
+                        .infoContainerMarginBottom
+                        {
+                            margin-bottom:103px;
+                        }
+                    }
+                }
+            }
+            .contactRight 
+            {
+                form 
+                {
+                    .formContainer 
+                    {
+                        .dataButton 
+                        {
+                            .buttonArea 
+                            {
+                                padding:33px 0 33px 0 !important;
+                            }
+                            .fieldButton 
+                            {
+                                border:2.43px solid $fieldBorder;
+                                border-radius:12px;
+                                font-size:71px;
+                                padding:33px 0 33px 13%;
+                            }
+                            .fieldMessage 
+                            {
+                                height:895px;
+                                padding:71px 0 71px 6.5%;
+                            }
+                        }
+                        .formMargin 
+                        {
+                            margin:96px 0 0 0;
+                        }
+                        .msgs 
+                        {
+                            margin:24.3px 0 0 0;
+                            .error 
+                            {
+                                font-size:47px;
+                            }
+                            .submitted 
+                            {
+                                font-size:47px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .question 
+        {
+            margin-top:50px;
+        }
+        .reach 
+        {
+            h1 
+            {
+                font-size:96px;
+            }
+        }
+    }
+}

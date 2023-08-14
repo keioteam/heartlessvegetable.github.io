@@ -1,0 +1,657 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- News
+ - Content Area
+  - Left News
+   - Block
+    - Line Bottom
+    - Line Padding
+    - Line Projects
+     - Line
+    - Link
+     - A
+     - Ground Mars
+    - White
+   - Planet Area
+    - Planet
+     - Img
+    - Text
+     - H1
+  - Right News
+   - Launching
+   - News Content 
+    - Info Block
+     - Button Zone
+     - Info Block Area
+      - H1
+      - H3
+      - H4
+    - Info Block Bottom
+   - Orbit
+- Media Queries
+ - Max Width - 250px
+ - Other Screen Sizes
+
+*/
+
+
+// Section - News
+.news 
+{
+    margin:0;
+    width:100%;
+    .contentArea
+    {
+        width:100%;
+        .leftNews
+        {
+            border-right:1px solid $white;
+            width:68%;
+            .block 
+            {
+                .lineBottom 
+                {
+                    padding-bottom:0 !important;
+                }
+                .linePadding 
+                {
+                    padding-top:76px;
+                }
+                .lineProjects
+                {
+                    padding-bottom:76px;
+                    width:100%;
+                    .line 
+                    {
+                        background:$white;
+                        height:1px;
+                        width:100%;
+                    }
+                }
+                // Links to the news texts
+                .link 
+                {
+                    a 
+                    {
+                        color:$white;
+                        cursor:pointer;
+                        font-family:rajdhaniBold;
+                        font-size:36px;
+                        margin-left:9.17%;
+                    }
+                    .groundMars 
+                    {
+                        color:$newsText;
+                    }
+                }
+                .white 
+                {
+                    color:$white;
+                }
+            }
+            .planetArea 
+            {
+                .planet 
+                {
+                    // Image (Planet Mars)
+                    img 
+                    {
+                        width:50%;
+                    }
+                }
+                // Text (Planet Mars)
+                .text 
+                {
+                    margin:16px 0 0 10%;
+                    h1 
+                    {
+                        font-family:rajdhaniBold;
+                        font-size:64px;
+                        margin:0;
+                        padding:0;
+                        text-align:start;
+                    }
+                }
+            }
+        }
+        .rightNews 
+        {
+            border-top:1px solid $white;
+            position:relative;
+            width:32%;
+            .launching 
+            {
+                display:none;
+            }
+            .newsContent 
+            {
+                // Texts and buttons on the right
+                .infoBlock
+                {
+                    margin:100px 0 0 8.9%;
+                    .buttonZone 
+                    {
+                        margin:57px 0 0 0;
+                    }
+                    .infoBlockArea 
+                    {
+                        margin:23px 0 0 0;
+                        h1 
+                        {
+                            color:$white;
+                            font-family:rajdhaniRegular;
+                            font-size:42px;
+                            text-align:start;
+                        }
+                        h3 
+                        {
+                            font-family:rajdhaniRegular;
+                        }
+                        h4 {
+                            font-family:rajdhaniRegular;
+                            font-size:24px;
+                        }
+                    }
+                }
+                .infoBlockBottom
+                {
+                    bottom:0;
+                    margin:0 0 100px 8.9%;
+                    position:absolute;
+                }
+            }
+            .orbit 
+            {
+                display:none;
+            }
+        }
+    }
+}
+
+
+// Screen size - max width - 250px
+@media (max-width:250px)
+{
+    .news 
+    {
+        .contentArea 
+        {
+            .rightNews 
+            {
+                .newsContent 
+                {
+                    .infoBlock 
+                    {
+                        h3 
+                        {
+                            font-size:27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (max-width:300px)
+{
+    .news 
+    {
+        .contentArea 
+        {
+            .rightNews 
+            {
+                .newsContent 
+                {
+                    .infoBlock 
+                    {
+                        .infoBlockArea 
+                        {
+                            h1 
+                            {
+                                font-size:31px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px)
+{
+    .news 
+    {
+        .contentArea 
+        {
+            .leftNews 
+            {
+                border-right:none;
+                width:100%;
+                .block 
+                {
+                    .link  
+                    {
+                        display:flex;
+                        justify-content:center;
+                        margin:0;
+                        padding:0;
+                        width:100%;
+                        a 
+                        {
+                            margin-left:0;
+                            text-align:center;
+                        }
+                    }
+                }
+                .lineBottomPlanet
+                {
+                    display:none;
+                }
+                .planetArea 
+                {
+                    display:none;
+                }
+            }
+            .rightNews 
+            {
+                border-top:none;
+                position:relative;
+                width:100%;
+                .newsContent 
+                {
+                    .infoBlock 
+                    {
+                        margin:0;
+                        padding:0;
+                        .infoBlockArea 
+                        {
+                            h1 
+                            {
+                                text-align:center;
+                            }
+                            h3
+                            {
+                                text-align:center;
+                                width:100%;
+                            }
+                            h4
+                            {
+                                text-align:center;
+                                width:100%;
+                            }
+                        }
+                    }
+                    .infoBlockBottom 
+                    {
+                        margin:179px 0 0 0;
+                        padding:0;
+                        position:relative;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1401px) and (max-width:1600px)
+{
+    .news 
+    {
+        .headingNews 
+        {
+            width:80% !important;
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    .news 
+    {
+        .contentArea
+        {
+            .leftNews
+            {
+                border-right:1.25px solid $white;
+                .block 
+                {
+                    .linePadding 
+                    {
+                        padding-top:95px;
+                    }
+                    .lineProjects
+                    {
+                        padding-bottom:95px;
+                        .line 
+                        {
+                            height:1.25px;
+                        }
+                    }
+                    .link 
+                    {
+                        a 
+                        {
+                            font-size:45px;
+                        }
+                    }
+                }
+                .planetArea 
+                {
+                    .planet 
+                    {
+                        img 
+                        {
+                            height:auto;
+                            width:50%;
+                        }
+                    }
+                    .text 
+                    {
+                        margin:20px 0 0 10%;
+                        h1 
+                        {
+                            font-size:80px;
+                        }
+                    }
+                }
+            }
+            .rightNews 
+            {
+                border-top:1.25px solid $white;
+                .newsContent 
+                {
+                    .infoBlock
+                    {
+                        margin:125px 0 0 8.9%;
+                        .buttonZone 
+                        {
+                            margin:71px 0 0 0;
+                        }
+                        .infoBlockArea 
+                        {
+                            margin:28px 0 0 0;
+                            h1 
+                            {
+                                font-size:52px;
+                            }
+                            h4 {
+                                font-size:30px;
+                            }
+                        }
+                    }
+                    .infoBlockBottom
+                    {
+                        margin:0 0 125px 8.9%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    .news 
+    {
+        .contentArea
+        {
+            .leftNews
+            {
+                border-right:1.56px solid $white;
+                .block 
+                {
+                    .linePadding 
+                    {
+                        padding-top:118px;
+                    }
+                    .lineProjects
+                    {
+                        padding-bottom:118px;
+                        .line 
+                        {
+                            height:1.56px;
+                        }
+                    }
+                    .link 
+                    {
+                        a 
+                        {
+                            font-size:56px;
+                        }
+                    }
+                }
+                .planetArea 
+                {
+                    .planet 
+                    {
+                        img 
+                        {
+                            height:auto;
+                            width:50%;
+                        }
+                    }
+                    .text 
+                    {
+                        margin:25px 0 0 10%;
+                        h1 
+                        {
+                            font-size:100px;
+                        }
+                    }
+                }
+            }
+            .rightNews 
+            {
+                border-top:1.56px solid $white;
+                .newsContent 
+                {
+                    .infoBlock
+                    {
+                        margin:156px 0 0 8.9%;
+                        .buttonZone 
+                        {
+                            margin:88px 0 0 0;
+                        }
+                        .infoBlockArea 
+                        {
+                            margin:35px 0 0 0;
+                            h1 
+                            {
+                                font-size:66px;
+                            }
+                            h4 {
+                                font-size:37px;
+                            }
+                        }
+                    }
+                    .infoBlockBottom
+                    {
+                        margin:0 0 156px 8.9%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    .news 
+    {
+        .contentArea
+        {
+            .leftNews
+            {
+                border-right:1.95px solid $white;
+                .block 
+                {
+                    .linePadding 
+                    {
+                        padding-top:148px;
+                    }
+                    .lineProjects
+                    {
+                        padding-bottom:148px;
+                        .line 
+                        {
+                            height:1.95px;
+                        }
+                    }
+                    .link 
+                    {
+                        a 
+                        {
+                            font-size:70px;
+                        }
+                    }
+                }
+                .planetArea 
+                {
+                    .planet 
+                    {
+                        img 
+                        {
+                            height:auto;
+                            width:50%;
+                        }
+                    }
+                    .text 
+                    {
+                        margin:31px 0 0 10%;
+                        h1 
+                        {
+                            font-size:125px;
+                        }
+                    }
+                }
+            }
+            .rightNews 
+            {
+                border-top:1.95px solid $white;
+                .newsContent 
+                {
+                    .infoBlock
+                    {
+                        margin:195px 0 0 8.9%;
+                        .buttonZone 
+                        {
+                            margin:110px 0 0 0;
+                        }
+                        .infoBlockArea 
+                        {
+                            margin:43px 0 0 0;
+                            h1 
+                            {
+                                font-size:82px;
+                            }
+                            h4 {
+                                font-size:46px;
+                            }
+                        }
+                    }
+                    .infoBlockBottom
+                    {
+                        margin:0 0 195px 8.9%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px)
+{
+    .news 
+    {
+        .contentArea
+        {
+            .leftNews
+            {
+                border-right:2.43px solid $white;
+                .block 
+                {
+                    .linePadding 
+                    {
+                        padding-top:185px;
+                    }
+                    .lineProjects
+                    {
+                        padding-bottom:185px;
+                        .line 
+                        {
+                            height:2.43px;
+                        }
+                    }
+                    .link 
+                    {
+                        a 
+                        {
+                            font-size:87px;
+                        }
+                    }
+                }
+                .planetArea 
+                {
+                    .planet 
+                    {
+                        img 
+                        {
+                            height:auto;
+                            width:50%;
+                        }
+                    }
+                    .text 
+                    {
+                        margin:38px 0 0 10%;
+                        h1 
+                        {
+                            font-size:156px;
+                        }
+                    }
+                }
+            }
+            .rightNews 
+            {
+                border-top:2.43px solid $white;
+                .newsContent 
+                {
+                    .infoBlock
+                    {
+                        margin:243px 0 0 8.9%;
+                        .buttonZone 
+                        {
+                            margin:137px 0 0 0;
+                        }
+                        .infoBlockArea 
+                        {
+                            margin:53px 0 0 0;
+                            h1 
+                            {
+                                font-size:102px;
+                            }
+                            h4 {
+                                font-size:57px;
+                            }
+                        }
+                    }
+                    .infoBlockBottom
+                    {
+                        margin:0 0 243px 8.9%;
+                    }
+                }
+            }
+        }
+    }
+}

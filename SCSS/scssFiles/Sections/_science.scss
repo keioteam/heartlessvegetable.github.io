@@ -1,0 +1,759 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- Science
+ - Info Col
+  - Info Section
+   - H4
+   - Science Heading
+    - H1
+ - Projects
+  - Block
+   - Block Container
+    - Img
+    - Plus and Line
+     - Line Science
+- Media Queries
+ - Max Width - 300px
+ - Other Screen Sizes
+
+*/
+
+
+// Section - Science
+.science 
+{
+    margin:0;
+    padding:0;
+    width:87%;
+    // Our science lab area
+    .infoCol 
+    {
+        // Subcontainer (our science lab)
+        .infoSection 
+        {
+            margin:0 0 0 14%;
+            // Text (Our science lab...)
+            h4 
+            {
+
+                color:$white;
+                font-size:27px;
+                margin-bottom:36px;
+                margin-top:10px;
+            }
+            // Container - heading - Our Science Lab
+            .scienceHeading
+            {
+                // Text
+                h1 
+                {
+                    color:$loaderFirstShape;
+                    display:inline-block;
+                    font-family:rajdhaniRegular;
+                    font-size:48px;
+                    margin:0;
+                }
+            }
+        }
+    }
+    .marsImg 
+    {
+        border-radius:10px;
+    }
+    // Projects on the bottom
+    .projects 
+    {
+        margin:108px 0 0 0;
+        // Block
+        .block 
+        {
+            // Block container
+            .blockContainer 
+            {
+                .firstImg 
+                {
+                    border-bottom-left-radius:10px;
+                    border-top-left-radius:10px;
+                }
+                // Image
+                img 
+                {
+                    margin:46px 0 0 0;
+                }
+                .info 
+                {
+                    h4 
+                    {
+                        color:$white;
+                    }
+                    h5 
+                    {
+                        color:$white;
+                    }
+                }
+                .lastImg 
+                {
+                    border-bottom-right-radius:10px;
+                    border-top-right-radius:10px;
+                }
+                // Creation of plus and line
+                .plusAndLine
+                {
+                    .lineScience
+                    {
+                        width:283px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Screen size - max width - 300px
+@media (max-width:300px)
+{
+    .science 
+    {
+        .infoCol
+        {
+            .infoSection
+            {
+                .scienceHeading
+                {
+                    h1 
+                    {
+                        font-size:39px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (max-width:400px)
+{
+    .science 
+    {
+        .projects 
+        {
+            .block 
+            {
+                .blockContainer
+                {
+                    img 
+                    {
+                        margin-top:15px;
+                    }
+                    .info
+                    {
+                        margin:0;
+                        padding:0;
+                    }
+                    .plusAndLine 
+                    {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:700px)
+{
+    .science 
+    {
+        .projects 
+        {
+            .block 
+            {
+                display:flex;
+                justify-content:center;
+                .blockContainer
+                {
+                    width:90%;
+                    .plusAndLine 
+                    {
+                        .plus 
+                        {
+                            display:block;
+                        }
+                    }
+                }
+            }
+            .blockMargin 
+            {
+                margin-top:104px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:701px) and (max-width:1400px)
+{
+    .science 
+    {
+        .projects 
+        {
+            .block 
+            {
+                display:flex;
+                justify-content:center;
+                .blockContainer
+                {
+                    width:50%;
+                    .plusAndLine 
+                    {
+                        .plus 
+                        {
+                            display:block;
+                        }
+                    }
+                }
+            }
+            .blockMargin 
+            {
+                margin-top:104px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px)
+{
+    .science
+    {
+        width:100%;
+        .infoCol
+        {
+            display:flex;
+            justify-content:center;
+            .infoSection
+            {
+                margin:0;
+                width:87%;
+                .buttonElement
+                {
+                    margin-top:36px;
+                }
+                h4 
+                {
+                    margin-top:10px;
+                    text-align:center;
+                }
+                .scienceHeading
+                {
+                    display:flex;
+                    justify-content:center;
+                }
+            }
+        }
+        .marsImg 
+        {
+            margin-top:109px;
+        }
+    }
+}
+
+
+@media (min-width:1401px) and (max-width:1775px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .info 
+                    {
+                        h4 
+                        {
+                            span
+                            {
+                                display:none;
+                            }
+                        }
+                    }
+                    .plusAndLine
+                    {
+                        .lineScience 
+                        {
+                            width:195px;
+                        }
+                        .plus 
+                        {
+                            display:block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2075px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .info
+                    {
+                        h4 
+                        {
+                            span 
+                            {
+                                display:none;
+                            }
+                        }
+                    }
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:242px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    .science 
+    {
+        .infoCol 
+        {
+            .infoSection 
+            {
+                h4 
+                {
+                    font-size:33px;
+                    margin-bottom:45px;
+                    margin-top:12.5px;
+                }
+                .scienceHeading
+                {
+                    h1 
+                    {
+                        font-size:60px;
+                    }
+                }
+            }
+        }
+        .marsImg 
+        {
+            border-radius:12.5px;
+        }
+        .projects 
+        {
+            margin:135px 0 0 0;
+            .block 
+            {
+                .blockContainer 
+                {
+                    .firstImg 
+                    {
+                        border-bottom-left-radius:12.5px;
+                        border-top-left-radius:12.5px;
+                    }
+                    img 
+                    {
+                        margin:57px 0 0 0;
+                    }
+                    .lastImg 
+                    {
+                        border-bottom-left-radius:12.5px;
+                        border-top-left-radius:12.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2076px) and (max-width:2400px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:348px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:2594px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .info
+                    {
+                        h4 
+                        {
+                            span 
+                            {
+                                display:none;
+                            }
+                        }
+                    }
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:303px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    .science 
+    {
+        .infoCol 
+        {
+            .infoSection 
+            {
+                h4 
+                {
+                    font-size:41px;
+                    margin-bottom:56px;
+                    margin-top:15.6px;
+                }
+                .scienceHeading
+                {
+                    h1 
+                    {
+                        font-size:75px;
+                    }
+                }
+            }
+        }
+        .marsImg 
+        {
+            border-radius:15.6px;
+        }
+        .projects 
+        {
+            margin:169px 0 0 0;
+            .block 
+            {
+                .blockContainer 
+                {
+                    .firstImg 
+                    {
+                        border-bottom-left-radius:15.6px;
+                        border-top-left-radius:15.6px;
+                    }
+                    img 
+                    {
+                        margin:71px 0 0 0;
+                    }
+                    .lastImg 
+                    {
+                        border-bottom-left-radius:15.6px;
+                        border-top-left-radius:15.6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2595px) and (max-width:3000px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:435px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3243px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .info
+                    {
+                        h4 
+                        {
+                            span 
+                            {
+                                display:none;
+                            }
+                        }
+                    }
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:379px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    .science 
+    {
+        .infoCol 
+        {
+            .infoSection 
+            {
+                h4 
+                {
+                    font-size:51px;
+                    margin-bottom:70px;
+                    margin-top:19.5px;
+                }
+                .scienceHeading
+                {
+                    h1 
+                    {
+                        font-size:93px;
+                    }
+                }
+            }
+        }
+        .marsImg 
+        {
+            border-radius:19.5px;
+        }
+        .projects 
+        {
+            margin:211px 0 0 0;
+            .block 
+            {
+                .blockContainer 
+                {
+                    .firstImg 
+                    {
+                        border-bottom-left-radius:19.5px;
+                        border-top-left-radius:19.5px;
+                    }
+                    img 
+                    {
+                        margin:85px 0 0 0;
+                    }
+                    .lastImg 
+                    {
+                        border-bottom-left-radius:19.5px;
+                        border-top-left-radius:19.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3244px) and (max-width:3750px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:544px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) and (max-width:4054px)
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .info
+                    {
+                        h4 
+                        {
+                            span 
+                            {
+                                display:none;
+                            }
+                        }
+                    }
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:474px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px)
+{
+    .science 
+    {
+        .infoCol 
+        {
+            .infoSection 
+            {
+                h4 
+                {
+                    font-size:63px;
+                    margin-bottom:87px;
+                    margin-top:24.3px;
+                }
+                .scienceHeading
+                {
+                    h1 
+                    {
+                        font-size:116px;
+                    }
+                }
+            }
+        }
+        .marsImg 
+        {
+            border-radius:24.3px;
+        }
+        .projects 
+        {
+            margin:264px 0 0 0;
+            .block 
+            {
+                .blockContainer 
+                {
+                    .firstImg 
+                    {
+                        border-bottom-left-radius:24.3px;
+                        border-top-left-radius:24.3px;
+                    }
+                    img 
+                    {
+                        margin:106px 0 0 0;
+                    }
+                    .lastImg 
+                    {
+                        border-bottom-left-radius:24.3px;
+                        border-top-left-radius:24.3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:4055px) 
+{
+    .science
+    {
+        .projects
+        {
+            .block
+            {
+                .blockContainer
+                {
+                    .plusAndLine 
+                    {
+                        .lineScience
+                        {
+                            width:680px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .science img {
+//     max-height: 420px !important;
+//     margin: 20px 20px !important;
+// }

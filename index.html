@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+
+<!-- Website/Template Language -->
+<html lang="en">
+  <head>
+    <!-- Language Coding - UTF-8 -->
+    <meta charset="utf-8" />
+
+    <!-- Description, important for SEO -->
+    <meta
+      name="description"
+      content="A modern approach to sensing biometric data and it's application."
+    />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="Research and Development, Science, Design, Physiological Sensing, Wearables, Wearable Electronics, Trackers, Heatless Vegetable"
+    />
+
+    <!-- Suiting for different device sizes -->
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0"
+    />
+
+    <!-- For quality view on Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Connections with External Files -->
+    <!-- <link rel="icon" type="image/png" href="Images/titleBar/Mars.png" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap-grid.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap-reboot.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="SCSS/Bootstrap/bootstrap-reboot.min.css"
+    />
+    <link rel="stylesheet" href="SCSS/scssFiles/Style/style.css" />
+    <title>
+      Heartless Vegetable - A New Approarch to Biomentic Data Tracking
+    </title>
+
+    <!-- 
+
+        *******        
+        CREDITS
+        ******* 
+
+        ANIMATIONS
+
+
+        CODE SNIPPETS
+        Add React
+        https://reactjs.org/docs/add-react-to-a-website.html
+        https://www.youtube.com/watch?v=YnrgTBdhgV4
+        https://github.com/brickbones/add-react-to-website-tutorial/blob/master/index.html
+
+        Bootstrap, Five Columns
+        https://stackoverflow.com/questions/10387740/five-equal-columns-in-twitter-bootstrap (Fizzix)
+
+        Bootstrap, Vertical Align
+        https://getbootstrap.com/docs/5.0/layout/columns/
+
+        Hamburger Menu
+        https://www.youtube.com/watch?v=BN6fH1nRDxA
+
+        Header, Background Image
+        https://css-tricks.com/perfect-full-page-background-image/
+
+        Help with Code
+        Visual Studio Code
+
+        Loader
+        https://www.youtube.com/watch?v=fkvv6WrDJPQ
+
+        Math Operations
+        MS Calculator
+
+        Remove Gap Between Spans
+        https://www.geeksforgeeks.org/how-to-remove-the-space-between-inline-block-elements/
+
+        Vanilla, Contact, Button, Submit
+        https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit
+
+        Vanilla, Contact, Input, Delete Highlight, Active
+        https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element 
+        (Cory)
+
+        Vanilla, Contact, Inputs
+        https://www.w3schools.com/tags/tag_input.asp
+
+        Vanilla, Contact, Inputs, Number and Tel
+        https://stackoverflow.com/questions/8216278/html5-input-type-number-vs-tel 
+        (twotwotwo)
+
+        Vanilla, Contact, Placeholder Color
+        https://stackoverflow.com/questions/2610497/change-a-html5-inputs-placeholder-color-with-css 
+        (fuxia)
+
+        Vanilla, Contact, Prevent Scroll to the Top on Button Click
+        https://stackoverflow.com/questions/1601933/how-do-i-stop-a-web-page-from-scrolling-to-the-top-when-a-link-is-clicked-that-t
+        (Paolo Bergantino)
+
+        Vanilla, Contact, Reset Form After Submit
+        https://stackoverflow.com/questions/17743657/when-i-submit-the-contact-form-i-want-to-clear-from-fields 
+        (Tushar Gupta - curioustushar)
+
+        Vanilla, Contact, Social Icons
+        https://www.freepik.com/free-vector/popular-social-media-logo-collection_1843264.htm#page=1&query=Facebook&position=2 
+        (BiZkettE1)
+
+        Vanilla, Header, Sticky Menu
+        Previous Experience
+
+        Vanilla, News, jQuery, Change Text Color
+        https://stackoverflow.com/questions/2001366/how-can-i-change-the-text-color-with-jquery
+        (Annabelle)
+
+        Vanilla, Science, Reorder Bootstrap Columns
+        https://getbootstrap.com/docs/5.0/layout/columns/
+
+
+        COLORS
+        Vanilla, Header, Color Wheel
+        https://www.canva.com/colors/color-wheel/
+
+        Vanilla, Header, Hex to Rgba 
+        https://rgbacolorpicker.com/hex-to-rgba
+
+        
+        CSS, SCSS CHECK - VALIDATION
+        CSS Validator
+        https://jigsaw.w3.org/css-validator/
+
+
+        Fonts
+        Google Fonts
+
+        HTML Validator
+        https://validator.w3.org/
+
+        Title Bar, Mars
+        https://www.freepik.com/free-vector/mars-exploration-background_3285020.htm#query=Mars&position=2&from_view=search (freepik)
+
+        Twilight, Header, Background
+        https://stocksnap.io/photo/mars-crater-LO0S8HZD55
+        (NASA)
+
+        Twilight, Science, Img
+        https://unsplash.com/photos/0XUuh7gEHuo
+        (Daniel Gregoire)
+
+        Vanilla, About, Arrow
+        https://www.flaticon.com/free-icon/next_130843 (Freepik)
+
+        Vanilla, About, Crop Images
+        https://imageresizer.com/
+
+        Vanilla, About, Mars Probe
+        https://pixabay.com/photos/mission-to-mars-mars-probe-2645404/ (PIRO4D)
+
+        Vanilla, About, Sizes Help
+        Mozilla Firefox
+
+        Vanilla, Contact, Social Icons
+        https://www.freepik.com/free-vector/popular-social-media-logo-collection_1843264.htm#page=1&query=Facebook&position=2 
+        (BiZkettE1)
+
+        Vanilla, Header, Background, Mars
+        https://www.freepik.com/premium-photo/mars-planets-solar-system-high-quality-science-wallpaper_6961819.htm#page=1&query=Mars&position=22 (vadimsadovski)
+
+        Vanilla, Header, Browser Help
+        Mozilla Firefox
+
+        Vanilla, Header, Mars Info
+        https://mars.nasa.gov/all-about-mars/facts/
+
+        Vanilla, News, Ice Text
+        https://airandspace.si.edu/exhibitions/exploring-the-planets/online/solar-system/mars/water-ice/ice.cfm
+        https://earthsky.org/space/mars-ice-is-dusty-and-could-melt-study-says/
+
+        Vanilla, News, Info about Resolutions
+        https://www.viewsonic.com/library/tech/monitor-resolution-aspect-ratio/
+        https://www.eizo.com/library/basics/eizo_4k_monitors/
+        https://www.techtarget.com/whatis/definition/720p
+
+        Vanilla, News, Launched the Most Ambitious Mars Rover
+        https://www.nature.com/articles/d41586-020-02257-w
+
+        Vanilla, News, Mars
+        https://www.freepik.com/free-vector/solar-system-diagram_4366258.htm#page=4&query=Mars&position=68 (brgfx)
+
+        Vanilla, News, Seven Years in Orbit
+        https://www.thehindu.com/sci-tech/technology/indias-mars-probe-completes-7-years-in-orbit/article36679383.ece
+
+        Vanilla, News, Spacecrafts - Launching to Mars
+        https://edition.cnn.com/2020/07/27/world/mars-mission-launches-summer-2020-scn/index.html
+
+        Vanilla, News, UAE and Mars
+        https://www.nytimes.com/2021/02/09/science/uae-mars-mission-red-planet.html
+
+        Vanilla, Projects, Mars
+        https://pixabay.com/illustrations/mars-planet-eclipse-space-cosmos-5792147/ (ParallelVision)
+
+        Vanilla, Projects, Space Shuttle
+        https://unsplash.com/photos/GDdRP7U5ct0 (SpaceX)
+
+        Vanilla, Research, Atom Icon
+        https://www.flaticon.com/free-icon/atom_112739 (Freepik)
+
+        Vanilla, Research, Computer Icon
+        https://www.flaticon.com/free-icon/computer_130258 (Freepik)
+
+        Vanilla, Research, Mars Icon
+        https://www.flaticon.com/free-icon/mars_124633 (Freepik)
+
+        Vanilla, Science, Base
+        https://pixabay.com/photos/cosmonaut-astronaut-astronomy-4126820/ (simisi1)
+
+        Vanilla, Science, Mars Video
+        https://pixabay.com/videos/mars-planet-space-stars-universe-65129/ (ChristianBodhi)
+
+        Vanilla, Science, Planet
+        https://pixabay.com/photos/mars-planet-space-outer-space-5564141/ (BrunoAlbino)
+        https://www.freepik.com/free-photo/galaxy-night-panoramic_13140028.htm (freepik)
+
+        Vanilla, Science, Rover
+        https://pixabay.com/photos/mars-mars-rover-space-travel-rover-67522/ (WikiImages)
+
+        Vanilla, Science, Space Shuttle
+        https://pixabay.com/photos/rocket-launch-rocket-take-off-67643/ (WikiImages)
+
+        
+        -->
+
+    <!-- 
+
+
+        *****************
+        TABLE OF CONTENTS
+        *****************
+
+        - Body 
+         - React Loader
+         - HTML Loader
+          - Container
+           - Ring
+           - Ring
+           - Ring
+           - Scientis Text
+         - Main Container
+          - Section
+           - Header
+            - Header, Content
+             - Top Container
+              - Top
+               - Logo
+                - H2 
+                 - Span, Sci
+                 - Span, entis
+               - Navbar
+                - Ul
+                 - Li
+                  - A
+                 - Li
+                  - A
+                 - Li
+                  - A
+                 - Li
+                  - A
+                 - Li
+                  - A
+                 - Li
+                  - A
+             - Middle Container
+              - Middle 
+               - H2
+                - H1
+             - Bottom
+              - Column One
+               - Info Line, Container
+                - H5
+                - H4
+                - Line
+               - Plus
+                - Horizontal 
+                - Vertical
+              - Column Two
+               - Info Line, Container
+                - H5
+                - H4
+                - Line
+               - Plus
+                - Horizontal 
+                - Vertical
+              - Column Three
+               - Info Line, Container
+                - H5
+                - H4
+                - Line
+               - Plus
+                - Horizontal 
+                - Vertical
+              - Column Four
+               - Info Line, Container
+                - H5
+                - H4
+                - Line
+               - Plus
+                - Horizontal 
+                - Vertical
+              - Column Five
+               - Social Area
+                - A
+                - Social Line
+            - Hamburger Menu
+             - Line, Top
+             - Line, Middle
+             - Line, Bottom
+            - Phone Menu
+             - Links Area
+              - Ul
+               - Li
+                - A
+               - Li
+                - A
+               - Li
+                - A
+               - Li
+                - A
+               - Li
+                - A
+               - Li
+                - A
+          - Section
+           - About
+            - Left
+             - Heading
+              - H3
+             - Heading Line Area
+              - Heading Line
+             - Subheading
+              - H1
+             - Text
+              - Info Text
+             - Button Element
+              - Button
+               - Button Area
+                - A
+                - Div - Img
+                 - Img
+            - Right
+             - Img Container
+              - Img
+             - Opacity Layer
+              - Center Text
+               - Div
+                - H2
+                - H2
+                - H2
+             - Line Area
+              - Line
+          - Section
+           - Section Content 
+            - Research
+             - Div
+              - Heading Width
+               - Div
+                - Heading
+                 - H3
+                - Heading Line Area
+                 - Heading Line
+               - Div
+             - Content Area
+              - Below Heading
+               - Block
+                - Div
+                 - Img
+                - Div
+                 - H3
+                - Div
+                 - Line
+                - Div
+                 - H4
+               - Block
+                - Div
+                 - Img
+                - Div
+                 - H3
+                - Div
+                 - Line
+                - Div
+                 - H4
+               - Block
+                - Div
+                 - Img
+                - Div
+                 - H3
+                - Div
+                 - Line
+                - Div
+                 - H4
+          - Section
+           - Section Content
+            - Science
+             - Row
+              - Col
+               - Div
+                - Img
+              - Info Col
+               - Info Section
+                - Science Heading
+                 - H1
+                - H4
+                - Button Element
+                 - Button
+                  - Button Area
+                   - A
+                   - Img
+             - Projects
+              - Block
+               - Block Container
+                - Info
+                 - H5
+                 - H4
+                - Plus and Line
+                 - Plus
+                  - Horizontal
+                  - Vertical
+                 - Line Science
+                - Img
+              - Block
+               - Block Container
+                - Info
+                 - H5
+                 - H4
+                - Plus and Line
+                 - Plus
+                  - Horizontal
+                  - Vertical
+                 - Line Science
+                - Img
+              - Block
+               - Block Container
+                - Info
+                 - H5
+                 - H4
+                - Plus and Line
+                 - Plus
+                  - Horizontal
+                  - Vertical
+                 - Line Science
+                - Img
+              - Block
+               - Block Container
+                - Info
+                 - H5
+                 - H4
+                - Plus and Line
+                 - Plus
+                  - Horizontal
+                  - Vertical
+                 - Line Science
+                - Img
+          - Section
+           - Section Content
+            - Projects
+             - Img Info
+              - Img
+              - Info Area
+               - Text and Button
+                - H4
+                - H2
+                - H4
+                - Button Element
+                 - Button
+                  - Button Area
+                   - A
+                   - Img
+                    - Img
+             - Img Info
+              - Img
+              - Info Area
+               - Text and Button
+                - H4
+                - H2
+                - H4
+                - Button Element
+                 - Button
+                  - Button Area
+                   - A
+                   - Img
+                    - Img
+          - Section
+           - Section Content 
+            - News
+             - Div
+              - Heading News
+               - Col
+                - Heading
+                 - H3
+                - Heading Line Area
+                 - Heading Line
+               - Col
+             - Content Area
+              - Row
+               - Left News 
+                - Block 
+                 - Line Projects
+                  - Line
+                 - Link
+                  - Ground Mars
+                 - Line Padding
+                  - Line
+                - Block
+                 - Link
+                  - Orbit Mars
+                 - Line Padding
+                  - Line
+                - Block
+                 - Link
+                  - Launching Mars
+                 - Line Padding
+                  - Line
+                - Planet Area
+                 - Planet
+                  - Img 
+                 - Text 
+                  - H1
+                - Block
+                 - Line Bottom
+                  - Line
+               - Right News
+                - Ground
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+                - Orbit
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+                - Launching
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+                 - Info Block
+                  - Info Block Area
+                   - H1
+                  - Info Block Area
+                   - H3
+                  - Info Block Area
+                   - H4
+                  - Button Zone
+                   - Button Element
+                    - Button
+                     - A
+                     - Img
+                      - Img 
+          - Section
+           - Section Content
+            - Contact
+             - Reach
+              - H1 
+             - Question
+              - H3
+             - Contact Container
+              - Contact Left
+               - Contact Info
+                - Info Content
+                 - Info Container
+                  - Info Heading
+                   - H3
+                  - Info Text Area
+                   - Div
+                    - H3
+                   - Div
+                    - H3
+                 - Info Container
+                  - Info Heading
+                   - H3
+                  - Info Text Area
+                   - Div
+                    - H3
+                   - Div
+                    - H3
+                 - Info Container
+                  - Info Heading
+                   - H3
+                  - Info Text Area
+                   - Div
+                    - H3
+                   - Div
+                    - H3
+                 - Contact Social
+                  - Div 
+                   - Social Icon
+                    - Img
+                   - Social Icon
+                    - Img
+                   - Social Icon
+                    - Img
+              - Contact Right
+               - Form
+                - Form Container
+                 - Data Button
+                  - Field Button
+                 - Data Button
+                  - Field Button
+                 - Data Button
+                  - Field Button
+                 - Data Button
+                  - Field Button
+                 - Data Button
+                  - Field Button
+                 - Data Button
+                  - Field Button
+                 - Msgs
+                  - Error
+                  - Submitted
+          - Section 
+           - Section Content 
+            - Footer
+             - Logo
+              - A
+               - H1
+                - Sci Area
+                - Entis
+             - Terraform
+              - H4
+             - Footer Social
+              - Div
+               - A
+                - Img
+               - Footer Social Middle
+                - Img
+               - A
+                - Img
+         - JavaScript Connections
+
+        -->
+  </head>
+
+  <!-- BODY -->
+  <body onload="formArea.reset();">
+    <!-- LOADER -->
+    <!-- Create loader with React -->
+    <div id="reactLoader"></div>
+
+    <!-- HTML Loader -->
+    <div class="align-items-center d-flex htmlLoader justify-content-center">
+      <div class="align-items-center container d-flex justify-content-center">
+        <!-- Shapes, Rings -->
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <!-- Text, Scientis -->
+        <span class="scientisText"> Heartless </span>
+      </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="mainContainer">
+      <!-- HEADER -->
+      <section>
+        <div
+          class="align-items-center d-flex header justify-content-center"
+          id="headerSection"
+        >
+          <div class="content m-0 p-0 row">
+            <div
+              class="align-items-start d-flex justify-content-center topContainer"
+              id="stickyMenu"
+            >
+              <!-- Top area -->
+              <div class="m-0 p-0 row top">
+                <!-- Logo Text -->
+                <div class="col-12 col-xxl-6 logo m-0 p-0">
+                  <a href="#">
+                    <h2>
+                      <span class="sci"> Heartless </span>
+                      <span> Vegetable </span>
+                    </h2>
+                  </a>
+                </div>
+                <!-- Navbar -->
+                <div class="col-6 d-flex justify-content-end m-0 navbar p-0">
+                  <ul>
+                    <li>
+                      <a href="#mission"> MISSION </a>
+                    </li>
+                    <li>
+                      <a href="#services"> SERVICES </a>
+                    </li>
+                    <li>
+                      <a href="#platform"> PLATFORM </a>
+                    </li>
+                    <li>
+                      <a href="#projects"> PROJECTS </a>
+                    </li>
+                    <li class="navbarContact">
+                      <a href="#contact"> CONTACT </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Middle of the header section - text -->
+            <div
+              class="align-items-center d-flex justify-content-center middleContainer"
+            >
+              <div class="middle">
+                <h2>a modern approach to biometric data tracking</h2>
+                <h1>Heartless</h1>
+              </div>
+            </div>
+            <div class="align-items-end bottom m-0 p-0 row">
+              <div class="colOne col-xxl infoZone m-0 p-0">
+                <div
+                  class="d-flex justify-content-center justify-content-xxl-start"
+                >
+                  <div class="info">
+                    <h5>Scalable platform</h5>
+                    <h4>Adaptive solution</h4>
+                  </div>
+                </div>
+                <div class="plusAndLine">
+                  <div class="plus">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                  <div class="lineHeader lineZone"></div>
+                </div>
+              </div>
+              <div class="colTwo col-xxl infoZone m-0 p-0">
+                <div
+                  class="d-flex justify-content-center justify-content-xxl-start"
+                >
+                  <div class="info">
+                    <h5 class="infoLarge">Real-time recording</h5>
+                    <h4 class="infoLarge">up to 120 people</h4>
+                  </div>
+                </div>
+                <div class="plusAndLine">
+                  <div class="plus">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                  <div class="lineHeader lineZone"></div>
+                </div>
+              </div>
+
+              <div class="colThree col-xxl infoZone m-0 p-0">
+                <div
+                  class="d-flex justify-content-center justify-content-xxl-start"
+                >
+                  <div class="info">
+                    <h5>Applications to date</h5>
+                    <h4>16 live performances</h4>
+                  </div>
+                </div>
+                <div class="plusAndLine">
+                  <div class="plus">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                  <div class="lineHeader lineZone"></div>
+                </div>
+              </div>
+              <div class="colFour col-xxl infoZone m-0 p-0">
+                <!-- <div
+                  class="d-flex justify-content-center justify-content-xxl-start"
+                >
+                  <div class="info">
+                    <h5>Gravity</h5>
+                    <h4 class="infoLarge">0.375 that of Earth</h4>
+                    <h4 class="infoSmall">0.375 (of Earth)</h4>
+                  </div>
+                </div>
+                <div class="plusAndLine">
+                  <div class="plus">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                  <div class="lineHeader lineZone"></div>
+                </div> -->
+              </div>
+              <!-- <div
+                class="colFive col-xxl d-flex infoZone justify-content-end m-0 p-0"
+              > -->
+              <!-- Social icons (FB, Instagram, Twitter) -->
+              <!-- <div class="socialArea">
+                  <div class="d-flex justify-content-center">
+                  
+                    <div>
+                      <a class="social" href="https://www.facebook.com/">
+                        Fb
+                      </a>
+                      <a class="social" href="https://www.linkedin.com/">
+                        In
+                      </a>
+                      <a class="end" href="https://twitter.com/i/flow/login">
+                        Tw
+                      </a>
+                    </div>
+                  </div>
+                  <div class="socialLine"></div>
+                </div> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <!-- Hamburger menu -->
+          <div class="hamburgerMenuArea">
+            <div class="hamburgerMenu">
+              <!-- Top line -->
+              <div class="hamburgerLine hamburgerLineTop"></div>
+              <!-- Middle line -->
+              <div class="hamburgerLine hamburgerLineMiddle"></div>
+              <!-- Bottom line -->
+              <div class="hamburgerLine hamburgerLineBottom"></div>
+            </div>
+          </div>
+          <!-- Navbar for small devices (you get this navbar, when you click on hamburger menu) -->
+          <div class="phoneMenu">
+            <div class="linksArea">
+              <ul>
+                <li>
+                  <a class="phoneLink" href="#"> HOME </a>
+                </li>
+                <li>
+                  <a class="phoneLink" href="#mission"> MISSION </a>
+                </li>
+                <li>
+                  <a class="phoneLink" href="#services"> SERVICES </a>
+                </li>
+                <li>
+                  <a class="phoneLink" href="#platform"> PLATFORM </a>
+                </li>
+                <li>
+                  <a class="phoneLink" href="#projects"> PROJECTS </a>
+                </li>
+                <li>
+                  <a class="phoneLink" href="#contact"> CONTACT </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION - ABOUT -->
+      <section class="about" id="mission">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="about align-items-center d-flex m-0 pb-0 pl-0 pr-0 row">
+            <div class="col-xxl-6 left m-0 p-0">
+              <!-- Heading (About) -->
+              <div class="heading">
+                <h3>MISSION</h3>
+              </div>
+              <div class="headingLineArea">
+                <div class="headingLine"></div>
+              </div>
+              <!-- Subheading (We Live Our Dreams) -->
+              <!-- <div class="subheading">
+                <h1>We Live Our Dreams</h1>
+              </div> -->
+              <!-- Text on the left side of the section -->
+              <div class="text">
+                <h3 class="infoText">
+                  At the core of our mission is the enhancement of human
+                  experiences. We are driven by a deep understanding of
+                  emotions, aiming to add new dimensions to the design of media
+                  experiences. Our commitment to exploration fuels our journey
+                  to constantly expand the boundaries. Through these efforts, we
+                  seek to weave a tapestry of enriched moments, where feelings
+                  are understood, designs are transformed, and human experience
+                  knows no bounds.
+                </h3>
+              </div>
+              <!-- Button (See More) -->
+              <!-- <div class="buttonElement">
+                <div class="button">
+                  <div class="buttonArea">
+                    <a href="#"> See More </a>
+                    <div class="img">
+                      <img
+                        class="img-fluid"
+                        src="Images/About/Arrow.png"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-xxl-6 mb-0 ml-0 mr-0 p-0 right">
+              <!-- Large image (Probe) -->
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="Images/About/mission.jpg"
+                  alt="Mission"
+                />
+              </div>
+              <!-- Text over image -->
+              <div class="opacityLayer">
+                <div class="centerText">
+                  <div>
+                    <h2>EXPLORE</h2>
+                    <h2>DESIGN</h2>
+                    <h2>AMPLIFY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="lineArea">
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION - RESEARCH -->
+      <section id="services">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="m-0 pb-0 pl-0 pr-0 research">
+            <div class="d-flex justify-content-center m-0 p-0 w-100">
+              <div class="headingWidth m-0 p-0 row">
+                <div class="col-xxl-6 m-0 p-0">
+                  <!-- Heading (Research) -->
+                  <div class="heading m-0 p-0">
+                    <h3>SERVICES</h3>
+                  </div>
+                  <div class="headingLineArea">
+                    <div class="headingLine"></div>
+                  </div>
+                </div>
+                <div class="col-xxl-6 m-0 p-0"></div>
+              </div>
+            </div>
+            <div
+              class="contentArea d-flex justify-content-center mb-0 ml-0 mr-0 p-0"
+            >
+              <div class="belowHeading m-0 p-0 row">
+                <div class="block col-xxl-4 m-0 p-0">
+                  <!-- Icon (astrophysics area) -->
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="img-fluid"
+                      src="Images/Research/platform.png"
+                      alt="Mars"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <h3>PLATFORM</h3>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="line"></div>
+                  </div>
+                  <!-- Text (astrophysics area) -->
+                  <div class="d-flex justify-content-center">
+                    <h4>
+                      Offering the sensing devices and software as a tool for
+                      studies and experiences base on the physiological data.
+                    </h4>
+                  </div>
+                </div>
+                <div class="block col-xxl-4 m-0 p-0">
+                  <!-- Icon (computer science) -->
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="computerImg img-fluid"
+                      src="Images/Research/consulting.png"
+                      alt="Computer"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <h3>CONSULTING</h3>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="line"></div>
+                  </div>
+                  <!-- Text (computer science area) -->
+                  <div class="d-flex justify-content-center">
+                    <h4>
+                      Evaluation and assessment of projects and products based
+                      emotional and cognitive aspects of the physiological
+                      signals.
+                    </h4>
+                  </div>
+                </div>
+                <div class="block col-xxl-4 m-0 p-0">
+                  <!-- Icon (theoretical physics) -->
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="atomImg img-fluid"
+                      src="Images/Research/events.png"
+                      alt="Atom"
+                    />
+                  </div>
+                  <!-- Subheading (THEORETICAL PHYSICS) -->
+                  <div class="d-flex justify-content-center">
+                    <h3>EVENTS AND ENTERTAINMENT</h3>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="line"></div>
+                  </div>
+                  <!-- Text (theoretical physics area) -->
+                  <div class="d-flex justify-content-center">
+                    <h4>
+                      Offering the large scale real time platform and know-how
+                      for event organizers and artists to create novel
+                      experiences.
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION - SCIENCE -->
+      <section id="platform">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="m-0 p-0 science">
+            <div class="m-0 p-0 row">
+              <div class="col-12 col-xxl-6 m-0 order-2 order-xxl-1 p-0">
+                <div>
+                  <img
+                    class="img-fluid marsImg"
+                    src="Images/Science/platform2.png"
+                    alt="Platform"
+                  />
+                </div>
+              </div>
+              <div
+                class="align-items-center col-12 col-xxl-6 d-flex infoCol m-0 order-1 order-xxl-2 p-0"
+              >
+                <div class="infoSection">
+                  <div class="scienceHeading">
+                    <h1>PLATFORM</h1>
+                  </div>
+                  <h4 style="font-weight: 200">
+                    Our biosensing devices measure and stream in real time the
+                    electrodermal activity (skin sweating) and blood volume
+                    pulse (blood pulsations caused by the heart). The software
+                    gathers this data and extracts features related to nervous
+                    system activity, such as sudden palm sweating caused by the
+                    emotional events and heart rate variability, a metric
+                    influenced by relaxation and arousal. These features are
+                    then recorded for further analysis or streamed to any other
+                    systems, in shows and performances that usually is
+                    generation of audio or visual content or used to control the
+                    staging elements. This enables us to use physiological
+                    signals in real time as well as extract meaningful insights
+                    related to the user’s emotional or arousal state.
+                  </h4>
+                  <!-- <div class="buttonElement">
+                    <div class="button">
+                      <div class="buttonArea">
+                        <a href="#"> Visit Lab </a>
+                        <div class="img">
+                          <img
+                            class="img-fluid"
+                            src="Images/About/Arrow.png"
+                            alt="Arrow"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="mb-0 ml-0 mr-0 p-0 projects row">
+              <div class="block col-12 col-xxl-4 mb-0 ml-0 mr-0 p-0">
+                <div class="blockContainer m-0 p-0">
+                  <div class="info">
+                    <h5>Scale</h5>
+                    <h4>
+                      Simultaneous synchronized recordings from multiple
+                      subjects
+                    </h4>
+                  </div>
+                  <div class="plusAndLine">
+                    <div class="plus">
+                      <div class="horizontal"></div>
+                      <div class="vertical"></div>
+                    </div>
+                    <div class="lineScience lineZone"></div>
+                  </div>
+                  <img
+                    class="firstImg img-fluid"
+                    src="Images/Science/image20.png"
+                    alt="Rover"
+                  />
+                </div>
+              </div>
+              <div
+                class="block blockMargin col-12 col-xxl-4 mb-0 ml-0 mr-0 p-0"
+              >
+                <div class="blockContainer m-0 p-0">
+                  <div class="info">
+                    <h5>Multimodality</h5>
+                    <h4>
+                      EDA, BVP, ECG, EMG, Respiration <br />(more to come)
+                    </h4>
+                  </div>
+                  <div class="plusAndLine">
+                    <div class="plus">
+                      <div class="horizontal"></div>
+                      <div class="vertical"></div>
+                    </div>
+                    <div class="lineScience lineZone"></div>
+                  </div>
+                  <img
+                    class="img-fluid"
+                    src="Images/Science/image4-2.png"
+                    alt="Planet"
+                  />
+                </div>
+              </div>
+              <div
+                class="block blockMargin col-12 col-xxl-4 mb-0 ml-0 mr-0 p-0"
+              >
+                <div class="blockContainer m-0 p-0">
+                  <div class="info">
+                    <h5>Real-time</h5>
+                    <h4>Supports real-time data processing and streaming</h4>
+                  </div>
+                  <div class="plusAndLine">
+                    <div class="plus">
+                      <div class="horizontal"></div>
+                      <div class="vertical"></div>
+                    </div>
+                    <div class="lineScience lineZone"></div>
+                  </div>
+                  <img
+                    class="img-fluid lastImg"
+                    src="Images/Science/image3.png"
+                    alt="Shuttle"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION - PROJECTS -->
+      <section id="projects">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="m-0 p-0 projects">
+            <div class="imgInfo">
+              <!-- Image - top, large -->
+              <img
+                class="img-fluid"
+                src="Images/Projects/image5-1.jpeg"
+                alt="Shuttle"
+              />
+              <div class="align-items-center d-flex infoArea">
+                <!-- Text and button over the top image -->
+                <div class="textButton">
+                  <h4>Corporeal Counterpoint</h4>
+                  <h2>[Experimental Performance with Stelarc]</h2>
+                  <h4 class="bottom">
+                    We used our system in a performance with a world renown
+                    performer Stelarc. Audience’s biodata as well as their
+                    distance to the artist was picked by our system and streamed
+                    live to a eurorack setup to create the soundscape and
+                    spatialize it according to the position of the artist in the
+                    room. We focused on sonifying the liveness aspects of the
+                    performer and the audience, turning their heart beats and
+                    breathing into a musical soundscape. Also for this show we
+                    added room-scale positioning functionality to our sensing
+                    devices using BLE Beacon technology.
+                  </h4>
+                  <!-- <div class="buttonElement">
+                    <div class="button">
+                      <div class="buttonArea">
+                        <a href="http://stelarc.org/"> Learn More </a>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="imgInfo">
+              <!-- Image, large on the bottom of the section -->
+              <img
+                class="img-fluid"
+                src="Images/Projects/image32-1.png"
+                alt="Mars"
+              />
+              <div class="align-items-center d-flex infoArea infoAreaBottom">
+                <!-- Text and button over the bottom image -->
+                <div class="textButton">
+                  <h4>Imageflowing</h4>
+                  <h2>[Photography & Biosensing]</h2>
+                  <h4 class="bottom">
+                    We developed a new photography exhibition using our
+                    physiological sensing system to track the photographer's
+                    biometric signals when they take the photographs. Using a
+                    recording of the photographer’s heart, respiration,
+                    temperature and weather conditions in the moment they
+                    pressed the shutter, we create a multidimensional experience
+                    of a “living” photograph using audio, haptic, thermal and
+                    visual feedback to enhancing the emotional value of the
+                    piece and highlighting the human nature of the artist who
+                    took the picture.
+                  </h4>
+                  <!-- <div class="buttonElement">
+                    <div class="button">
+                      <div class="buttonArea">
+                        <a href="https://pan.baidu.com/s/1-EJGRjNdzvg9CcV-Hd0sjw?pwd=htbc"> Learn More </a>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="imgInfo">
+              <img
+                class="img-fluid"
+                src="Images/Projects/image18.png"
+                alt="Shuttle"
+              />
+              <div class="align-items-center d-flex infoArea">
+                <!-- Text and button over the top image -->
+                <div class="textButton">
+                  <h4>Boiling Mind</h4>
+                  <h2>[Dance Performances]</h2>
+                  <h4 class="bottom">
+                    Using our platform we enabled a series of dance performances
+                    in Tokyo, Japan in collaboration with the SessionHouse.
+                    Music, lighting and projection mapping effects were
+                    generated in real time from the emotions of the audience.
+                    Our system recognized markers of emotions in the biodata of
+                    up to 70 spectators and that controlled the music and
+                    visuals.
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="imgInfo">
+              <img
+                class="img-fluid"
+                src="Images/Projects/image17-3.png"
+                alt="Mars"
+              />
+              <div class="align-items-center d-flex infoArea infoAreaBottom">
+                <div class="textButton">
+                  <h4>Frisson Waves</h4>
+                  <h2>[Classical Music concerts & Sensing]</h2>
+                  <h4 class="bottom">
+                    We joined a series of classical music concerts working on
+                    emotion and musical shivers detection and recognition. This
+                    information was then transmitted throughout the audience
+                    using our wearable thermal feedback system to create the
+                    sensation of shivers once someone sitting next to you
+                    experiences them. Later on we used the recorded biodata to
+                    re-create this emotional experience and presented this work
+                    at SIGGRAPH Asia.
+                  </h4>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="newsAnchor">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="m-0 pb-0 pl-0 pr-0 news">
+            <div class="d-flex justify-content-center m-0 p-0 w-100">
+              <div class="headingNews headingWidth m-0 p-0 row">
+                <div class="col-xxl-6 m-0 p-0">
+                  <div class="heading m-0 p-0">
+                    <h3>NEWS</h3>
+                  </div>
+                  <div class="headingLineArea">
+                    <div class="headingLine"></div>
+                  </div>
+                </div>
+                <div class="col-xxl-6 m-0 p-0"></div>
+              </div>
+            </div>
+            <div
+              class="contentArea d-flex justify-content-center mb-0 ml-0 mr-0 p-0"
+            >
+              <div class="m-0 p-0 row w-100">
+                <div class="col-12 col-xxl-6 leftNews m-0 p-0">
+                  <div class="block">
+                    <div class="lineProjects">
+                      <div class="line"></div>
+                    </div>
+                    <div class="link">
+                      <a class="groundMars"> RESEARCH ON MARS GROUND </a>
+                    </div>
+                    <div class="linePadding lineProjects">
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div class="link">
+                      <a class="orbitMars white"> RESEARCH IN MARS ORBIT </a>
+                    </div>
+                    <div class="linePadding lineProjects">
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div class="link">
+                      <a class="launchingMars white"> LAUNCHING TO SURFACE </a>
+                    </div>
+                    <div class="linePadding lineProjects">
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                  <div class="planetArea">
+                    <div class="d-flex justify-content-center planet">
+                      <img
+                        class="img-fluid"
+                        src="Images/News/Planet.png"
+                        alt="Planet"
+                      />
+                    </div>
+                    <div class="text">
+                      <h1>Planet Mars.</h1>
+                    </div>
+                  </div>
+                  <div class="block lineBottomPlanet">
+                    <div class="lineBottom linePadding lineProjects">
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xxl-6 m-0 p-0 rightNews">
+                  <div class="ground newsContent">
+                    <div class="infoBlock">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">Ice on Mars Surface</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>Like Earth, Mars has ice caps at its poles.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/ice.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="HTML/ice.html"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="infoBlock infoBlockBottom">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">Rover Perseverance Landed</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>Perseverance landed on surface of the Mars.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/rover.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="#"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="newsContent orbit">
+                    <div class="infoBlock">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">Seven Years in Orbit</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>India's Mars Orbiter - seven years in orbit.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/orbit.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="#"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="infoBlock infoBlockBottom">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">UAE and Mars</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>Mars Mission From the U.A.E.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/uae.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="#"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="launching newsContent">
+                    <div class="infoBlock">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">Spacecrafts - Launching to Mars</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>When Earth and Mars are in alignment.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/spacecrafts.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="#"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="infoBlock infoBlockBottom">
+                      <div class="infoBlockArea m-0 p-0">
+                        <h1 class="m-0 p-0">The Most Ambitious Mars Rover</h1>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h3>Launched successfully on 30 July.</h3>
+                      </div>
+                      <div class="infoBlockArea">
+                        <h4>April 2022</h4>
+                      </div>
+                      <div
+                        class="buttonZone"
+                        onclick="window.location = 'HTML/marsRover.html';"
+                      >
+                        <div class="buttonElement">
+                          <div class="button">
+                            <div class="buttonArea">
+                              <a href="#"> Read More </a>
+                              <div class="img">
+                                <img
+                                  class="img-fluid"
+                                  src="Images/About/Arrow.png"
+                                  alt="Arrow"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- SECTION - CONTACT -->
+      <section id="contact">
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="contact m-0 p-0">
+            <!-- Text (Reach Us) -->
+            <div class="m-0 p-0 reach">
+              <h1>REACH US</h1>
+            </div>
+            <!-- Text (You have a question for us?) -->
+            <div class="mb-0 ml-0 mr-0 p-0 question">
+              <h3>You have a question for us?</h3>
+            </div>
+            <div class="contactContainer mb-0 ml-0 mr-0 p-0 row">
+              <div
+                class="col-12 col-xxl-6 contactLeft mb-0 ml-0 mr-0 order-last order-xxl-first p-0"
+              >
+                <div class="contactInfo mb-0 ml-0 mr-0 pl-0 pr-0">
+                  <div class="infoContent">
+                    <!-- Address area -->
+                    <div class="infoContainer m-0 p-0">
+                      <div class="infoHeading m-0 p-0">
+                        <h3>ADDRESS</h3>
+                      </div>
+                      <div class="infoTextArea m-0 p-0">
+                        <div>
+                          <h3>
+                            UNIT A. 3/F, CHEONG SUN TOWER, 116-118 WING LOK
+                            STREET, SHEUNG WAN
+                          </h3>
+                        </div>
+                        <div>
+                          <h3>HONG KONG</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Phone area -->
+                    <!-- <div
+                      class="infoContainer infoContainerMargin mb-0 ml-0 mr-0 p-0"
+                    >
+                      <div class="infoHeading m-0 p-0">
+                        <h3>PHONE</h3>
+                      </div>
+                      <div class="infoTextArea m-0 p-0">
+                        <div>
+                          <h3>+81 80 9287 2277</h3>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- Web area -->
+                    <div
+                      class="infoContainer infoContainerMargin infoContainerMarginBottom ml-0 mr-0 p-0"
+                    >
+                      <div class="infoHeading m-0 p-0">
+                        <h3>EMAIL</h3>
+                      </div>
+                      <div class="infoTextArea m-0 p-0">
+                        <div>
+                          <h3>
+                            <a href="#"> info@heartlessvegetable.com </a>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-6 contactRight mb-0 ml-0 mr-0 p-0">
+                <form class="cForm" id="formArea" method="post" action="https://formspree.io/f/xjvqyjyk" novalidate>
+                  <!-- Form on the right side -->
+                  <div class="formContainer m-0 p-0 row">
+                    <div class="col-6 dataButton m-0 p-0">
+                      <input
+                        class="fieldButton"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="col-6 dataButton d-flex formMarginResponsive justify-content-end mb-0 ml-0 mr-0 p-0"
+                    >
+                      <input
+                        class="fieldButton"
+                        id="mail"
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                      />
+                    </div>
+                    <!-- <div class="col-6 dataButton formMargin mb-0 ml-0 mr-0 p-0">
+                      <input
+                        class="fieldButton"
+                        id="address"
+                        name="addressArea"
+                        placeholder="Address"
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="col-6 dataButton d-flex formMargin justify-content-end mb-0 ml-0 mr-0 p-0"
+                    >
+                      <input
+                        class="fieldButton"
+                        id="phone"
+                        name="phoneArea"
+                        placeholder="Phone"
+                        type="text"
+                      />
+                    </div> -->
+                    <div
+                      class="col-12 dataButton formMargin mb-0 ml-0 mr-0 p-0"
+                    >
+                      <textarea
+                        class="fieldButton fieldMessage"
+                        id="message"
+                        placeholder="Your Message"
+                        name="message"
+                      ></textarea>
+                    </div>
+                    <div
+                      class="col-12 col-xxl-6 dataButton d-flex formMargin justify-content-center justify-content-xl-start mb-0 ml-0 mr-0 p-0"
+                    >
+                      <input
+                        class="buttonArea fieldButton"
+                        id="butt"
+                        type="submit"
+                        value="Send"
+                      />
+                    </div>
+                    <!-- <div class="msgs">
+                      <div class="error" id="errorMessage"></div>
+                      <div class="submitted" id="submitMessage"></div>
+                    </div> -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION - FOOTER -->
+      <section>
+        <div class="d-flex justify-content-center sectionContent">
+          <div class="footer m-0 p-0">
+            <!-- Logo text -->
+            <div class="logo m-0 p-0">
+              <a href="#">
+                <h1 class="m-0 p-0">
+                  <span class="m-0 p-0 sciArea"> Heartless </span>
+                  <span class="entis m-0 p-0"> Vegetable </span>
+                </h1>
+              </a>
+            </div>
+            <!-- Text on the bottom -->
+            <div class="terraform">
+              <h4>Our mission is to enhance human experience.</h4>
+            </div>
+            <div class="d-flex footerSocial justify-content-center">
+              <div>
+                <a href="#">
+                  <img
+                    class="img-fluid"
+                    src="Images/Contact/image10.png"
+                    alt="Salad"
+                  />
+                </a>
+                <!-- <a class="footerSocialMiddle" href="https://www.instagram.com/">
+                  <img
+                    class="img-fluid"
+                    src="Images/Contact/instagramTwilight.png"
+                    alt="Instagram Icon"
+                  />
+                </a>
+                <a href="https://www.viber.com/en/">
+                  <img
+                    class="img-fluid"
+                    src="Images/Contact/viberTwilight.png"
+                    alt="Viber Icon"
+                  />
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript Connections -->
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/Bootstrap/bootstrap.js"></script>
+    <script src="JS/Bootstrap/bootstrap.min.js"></script>
+    <script src="JS/Bootstrap/bootstrap.bundle.js"></script>
+    <script src="JS/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="JS/buttons.js"></script>
+    <script src="JS/contact.js"></script>
+    <script src="JS/load.js"></script>
+    <script src="JS/menu.js"></script>
+    <script src="JS/news.js"></script>
+    <script src="JS/preventScroll.js"></script>
+    <script src="JS/pageTop.js"></script>
+    <script src="JS/stickyMenu.js"></script>
+    <script src="JS/Zenscroll/zenscroll-min.js"></script>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="reactLoader.js"></script>
+  </body>
+</html>

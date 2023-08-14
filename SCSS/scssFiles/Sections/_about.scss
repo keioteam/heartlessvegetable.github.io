@@ -1,0 +1,430 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- About
+ - Left
+  - Subheading
+   - H1
+  - Text
+   - Info Text
+ - Right
+  - Img Container
+  - Line Area
+   - Line
+  - Opacity Layer
+   - Center Text
+    - H2
+- Media Queries
+ - Max Width - 650px
+ - Other Screen Sizes
+
+*/
+
+
+// Section (About)
+.about 
+{
+    margin:0;
+    padding:0;
+    width:68.75%;
+    // Left side
+    .left 
+    {
+        // Subheading (We Live Our Dreams)
+        .subheading 
+        {
+            // Subheading (Text area)
+            h1 
+            {
+                color:$white;
+                display:inline-block;
+                font-family:rajdhaniRegular;
+                font-size:64px;
+                margin:20px 0 0 0;
+                padding:0;
+                text-align:start;
+            }
+        }
+        // Text container (From 1960s, humanity...)
+        .text 
+        {
+            // Text
+            .infoText 
+            {
+                font-family:rajdhaniRegular;
+                margin-bottom:77px;
+                margin-top:23px;
+                width:91.8%;
+            }
+        }
+    }
+    // Right side of the section
+    .right 
+    {
+        display:flex;
+        justify-content:end;
+        position:relative;
+        // Image container (Probe)
+        .imgContainer 
+        {
+            width:89.2%;
+            img 
+            {
+                border-radius:10px;
+            }
+        }
+        // Line container (between left and right side of the section)
+        .lineArea 
+        {
+            align-items:center;
+            display:flex;
+            height:100%;
+            left:0;
+            position:absolute;
+            width:100%;
+            // Line
+            .line 
+            {
+                background:$white;
+                height:0.77%;
+                width:30.6%;
+            }
+        }
+        // Layer with opacity over image
+        .opacityLayer 
+        {
+            background:$opacityLayer;
+            border-radius:10px;
+            position:absolute;
+            height:100%;
+            width:89.2%;
+            // Text container (ESTABLISH, BUILD, EXPLORE)
+            .centerText 
+            {
+                align-items:center;
+                display:flex;
+                height:100%;
+                justify-content:center;
+                // Text
+                h2 
+                {
+                    display:block;
+                    font-family:rajdhaniBold;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}
+
+
+// Media query (max width: 650px)
+@media (max-width:650px)
+{
+    .about
+    {
+        width:95%;
+        .left 
+        {
+            .subheading 
+            {
+                h1 
+                {
+                    font-size:40px;
+                    text-align:center;
+                }
+            }
+            .text 
+            {
+                .infoText 
+                {
+                    font-size:24px;
+                }
+            }
+        }
+        .right
+        {
+            .imgContainer 
+            {
+                display:flex;
+                justify-content:center;
+                width:100%;
+                img 
+                {
+                    width:100%;
+                }
+            }
+            .opacityLayer 
+            {
+                right:0;
+                width:100%;
+            }
+        }
+    }
+}
+
+
+// Other media queries
+@media (min-width:651px) and (max-width:1200px)
+{
+    .about
+    {
+        .right
+        {
+            .imgContainer 
+            {
+                display:flex;
+                justify-content:center;
+                width:100%;
+                img 
+                {
+                    width:75%;
+                }
+            }
+            .opacityLayer 
+            {
+                right:12.5%;
+                width:75%;
+            }
+        }
+    }
+}
+
+
+@media (min-width:651px) and (max-width:1600px)
+{
+    .about 
+    {
+        width:80%;
+    }
+}
+
+
+@media (min-width:1201px) and (max-width:1400px)
+{
+    .about
+    {
+        .right 
+        {
+            .imgContainer 
+            {
+                display:flex;
+                justify-content:center;
+                width:100%;
+                img 
+                {
+                    width:50%;
+                }
+            }
+            .opacityLayer 
+            {
+                right:25%;
+                width:50%;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px)
+{
+    .about 
+    {
+        .left 
+        {
+            .subheading 
+            {
+                display:flex;
+                justify-content:center;
+            }
+            .text 
+            {
+                display:flex;
+                justify-content:center;
+                .infoText
+                {
+                    text-align:center;
+                }
+            }
+        }
+        .right 
+        {
+            margin-top:15%;
+            .lineArea 
+            {
+                align-items:start;
+                justify-content:center;
+                .line 
+                {
+                    transform:rotate(90deg);
+                    width:15%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    .about 
+    {
+        .left 
+        {
+            .subheading 
+            {
+                h1 
+                {
+                    font-size:80px;
+                    margin:25px 0 0 0;
+                }
+            }
+            .text 
+            {
+                .infoText 
+                {
+                    margin-bottom:96px;
+                    margin-top:28px;
+                }
+            }
+        }
+        .right 
+        {
+            .imgContainer 
+            {
+                img 
+                {
+                    border-radius:12.5px;
+                }
+            }
+            .opacityLayer
+            {
+                border-radius:12.5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    .about 
+    {
+        .left 
+        {
+            .subheading 
+            {
+                h1 
+                {
+                    font-size:100px;
+                    margin:31px 0 0 0;
+                }
+            }
+            .text 
+            {
+                .infoText 
+                {
+                    margin-bottom:120px;
+                    margin-top:35px;
+                }
+            }
+        }
+        .right 
+        {
+            .imgContainer 
+            {
+                img 
+                {
+                    border-radius:15.6px;
+                }
+            }
+            .opacityLayer
+            {
+                border-radius:15.6px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    .about 
+    {
+        .left 
+        {
+            .subheading 
+            {
+                h1 
+                {
+                    font-size:125px;
+                    margin:38px 0 0 0;
+                }
+            }
+            .text 
+            {
+                .infoText 
+                {
+                    margin-bottom:150px;
+                    margin-top:43px;
+                }
+            }
+        }
+        .right 
+        {
+            .imgContainer 
+            {
+                img 
+                {
+                    border-radius:19.5px;
+                }
+            }
+            .opacityLayer
+            {
+                border-radius:19.5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px)
+{
+    .about 
+    {
+        .left 
+        {
+            .subheading 
+            {
+                h1 
+                {
+                    font-size:156px;
+                    margin:47px 0 0 0;
+                }
+            }
+            .text 
+            {
+                .infoText 
+                {
+                    margin-bottom:187px;
+                    margin-top:53px;
+                }
+            }
+        }
+        .right 
+        {
+            .imgContainer 
+            {
+                img 
+                {
+                    border-radius:24.3px;
+                }
+            }
+            .opacityLayer
+            {
+                border-radius:24.3px;
+            }
+        }
+    }
+}

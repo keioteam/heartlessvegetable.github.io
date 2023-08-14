@@ -1,0 +1,1044 @@
+/* 
+
+*****************
+TABLE OF CONTENTS
+*****************
+
+- Fonts
+- Mixins
+- Mixins, Larger Screens
+- Variables
+- Body
+ - Included Mixins
+ - HTML Loader
+  - Container 
+   - Ring
+   - Child 1
+   - Child 2
+   - Child 3
+   - Scientis Text
+ - Keyframes
+ - Main Container
+  - Imports
+  - News Section
+   - News Area
+    - News Content
+     - Text Container
+      - Text News
+       - H2
+       - Smaller Devices
+     - Text Info
+      - Date
+       - Span
+      - H1
+      - H2
+      - News Line
+    - Top Area
+     - Img
+  - Section Content
+- Media Queries
+
+*/
+
+
+// FONTS
+// Blinker Regular
+@font-face 
+{
+    font-family:"blinkerRegular";
+    src:url("../../../Fonts/Blinker/Blinker-Regular.ttf");
+}
+// Jura Bold
+@font-face 
+{
+    font-family:"juraBold";
+    src:url("../../../Fonts/Jura/Jura-Bold.ttf");
+}
+// Megrim
+@font-face 
+{
+    font-family:"megrim";
+    src:url("../../../Fonts/Megrim/Megrim-Regular.ttf");
+}
+// Rajdhani Bold
+@font-face 
+{
+    font-family:"rajdhaniBold";
+    src:url("../../../Fonts/Rajdhani/Rajdhani-Bold.ttf");
+}
+// Rajdhani Medium
+@font-face 
+{
+    font-family:"rajdhaniMedium";
+    src:url("../../../Fonts/Rajdhani/Rajdhani-Medium.ttf");
+}
+// Rajdhani Regular
+@font-face 
+{
+    font-family:"rajdhaniRegular";
+    src:url("../../../Fonts/Rajdhani/Rajdhani-Regular.ttf");
+}
+
+
+// MIXINS (8 Mixins)
+@mixin a
+{
+    color:$white;
+    text-decoration:none;
+}
+@mixin h1
+{
+    color:$white;
+    font-family:megrim;
+    font-size:144px;
+    margin:0;
+    margin-top:15px;
+    padding:0;
+    text-align:center;
+}
+@mixin h2
+{
+    color:$white;
+    display:inline-block;
+    font-family:rajdhaniMedium;
+    font-size:36px;
+    margin:0;
+    padding:0;
+}
+@mixin h3
+{
+    color:$white;
+    display:inline-block;
+    font-family:juraBold;
+    font-size:30px;
+    margin:0;
+    padding:0;
+}
+@mixin h4
+{
+    color:$white;
+    font-family:rajdhaniBold;
+    font-size:26px;
+    margin:0;
+    padding:0;
+}
+@mixin h5
+{
+    color:$white;
+    font-family:rajdhaniMedium;
+    font-size:21px;
+    margin:0;
+}
+@mixin sectionPadding
+{
+    padding-top:132px;
+}
+
+
+// MIXINS (FOR RESOLUTION 1921 - 2400px)
+@mixin h1_2400
+{
+    font-size:180px;
+    margin-top:18px;
+}
+@mixin h2_2400
+{
+    font-size:45px;
+}
+@mixin h3_2400
+{
+    font-size:37px;
+}
+@mixin h4_2400
+{
+    font-size:32px;
+}
+@mixin h5_2400
+{
+    font-size:26px;
+}
+@mixin sectionPadding_2400
+{
+    padding-top:165px;
+}
+
+
+// MIXINS (FOR RESOLUTION 2401 - 3000px)
+@mixin h1_3000
+{
+    font-size:225px;
+    margin-top:22px;
+}
+@mixin h2_3000
+{
+    font-size:56px;
+}
+@mixin h3_3000
+{
+    font-size:46px;
+}
+@mixin h4_3000
+{
+    font-size:40px;
+}
+@mixin h5_3000
+{
+    font-size:32px;
+}
+@mixin sectionPadding_3000
+{
+    padding-top:206px;
+}
+
+
+// MIXINS (FOR RESOLUTION 3001 - 3750px)
+@mixin h1_3750
+{
+    font-size:281px;
+    margin-top:27px;
+}
+@mixin h2_3750
+{
+    font-size:70px;
+}
+@mixin h3_3750
+{
+    font-size:57px;
+}
+@mixin h4_3750
+{
+    font-size:50px;
+}
+@mixin h5_3750
+{
+    font-size:40px;
+}
+@mixin sectionPadding_3750
+{
+    padding-top:258px;
+}
+
+
+// MIXINS (FOR RESOLUTION 3751 -> ...)
+@mixin h1_large
+{
+    font-size:351px;
+    margin-top:33px;
+}
+@mixin h2_large
+{
+    font-size:87px;
+}
+@mixin h3_large
+{
+    font-size:71px;
+}
+@mixin h4_large
+{
+    font-size:62px;
+}
+@mixin h5_large
+{
+    font-size:50px;
+}
+@mixin sectionPadding_large
+{
+    padding-top:323px;
+}
+
+
+// VARIABLES
+$black:#000000;
+$buttonBorders:#5fabf3;
+$buttonBordersProjects:#5fabf3;
+$contactError:#fe8b8e;
+$contactInfo:#131313;
+$contactInfoText:#d9e6e1;
+$contactSubmitted:#97eedd;
+$fieldBorder:#382c44;
+$hamburgerMenu:rgba(226, 120, 134, 0.5);
+$headingLine:#b590d8;
+$loaderBackground:#0a0016;
+$loaderFirstShape:#b590d8;
+$loaderSecondShape:#5fabf3;
+$loaderThirdShape:#222225;
+$logoBlue:#d1d0f8;
+$logoBrown:#916953;
+$logoRed:#fbc5dd;
+$menuHover:#8a3dc9;
+$navbarDark:#242427;
+$newsArea:#0a0016;
+$newsText:#b590d8;
+$opacityLayer:rgba(0, 0, 0, 0.5);
+$projectsBlue:rgb(85, 83, 109);
+$projectsInfo:#15101b;
+$projectsRed:#ec7979;
+$redStrong:#c83939;
+$sectionBackground:#0a0016;
+$sticky:rgba(23, 17, 43, 0.75);
+$white:#ffffff;
+
+
+// BODY
+body 
+{
+    overflow-x:hidden;
+
+
+    // INCLUDED MIXINS
+    a
+    {
+        @include a;
+    }
+    h1
+    {
+        @include h1;
+    }
+    h2 
+    {
+        @include h2;
+    }
+    h3 
+    {
+        @include h3;
+    }
+    h4 
+    {
+        @include h4;
+    }
+    h5 
+    {
+        @include h5;
+    }
+
+
+    // HTML Loader
+    .htmlLoader 
+    {
+        background:$loaderBackground;
+        height:100vh;
+        width:100vw;
+        // Container for loader
+        .container 
+        {
+            margin:0;
+            padding:0;
+            position:relative;
+            // Rings, Shapes
+            .ring 
+            {
+                border:0px solid $loaderBackground;
+                border-radius:50%;
+                height:200px;
+                margin:0;
+                padding:0;
+                position:absolute;
+                width:200px;
+            }
+            .ring:nth-child(1)
+            {
+                animation:rotateOne 2s linear infinite;
+                border-bottom-width:8px;
+                border-color:$loaderFirstShape;
+            }
+            .ring:nth-child(2)
+            {
+                animation:rotateTwo 2s linear infinite;
+                border-right-width:8px;
+                border-color:$loaderSecondShape;
+            }
+            .ring:nth-child(3)
+            {
+                animation:rotateThree 2s linear infinite;
+                border-top-width:8px;
+                border-color:$loaderThirdShape;
+            }
+            // Text - Scientis
+            .scientisText
+            {
+                color:$white;
+                font-family:blinkerRegular;
+            }
+        }
+    }
+
+
+    @keyframes rotateOne
+    {
+        0%
+        {
+            transform:rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        }
+        100%
+        {
+            transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        }
+    }
+    @keyframes rotateThree
+    {
+        0%
+        {
+            transform:rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        }
+        100%
+        {
+            transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        }
+    }
+    @keyframes rotateTwo
+    {
+        0%
+        {
+            transform:rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        }
+        100%
+        {
+            transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        }
+    }
+
+    
+    // MAIN CONTAINER
+    .mainContainer 
+    {
+        // IMPORTS
+        @import "../Content/section";
+        display:none;
+        position:absolute;
+        top:0;
+        // News - Ice, Mars Rover, Orbit, etc.
+        .newsSection 
+        {
+            background:$newsArea;
+            .newsArea 
+            {
+                .newsContent 
+                {
+                    width:83%;
+                    // Text on the right side
+                    .textContainer 
+                    {
+                        .textNews 
+                        {
+                            margin:75px 0 75px 0;
+                            width:90%;
+                            h2 
+                            {
+                                color:$white;
+                                font-family:rajdhaniRegular;
+                                font-size:32px;
+                                
+                            }
+                            .smallerDevices 
+                            {
+                                color:$white;
+                                display:none;
+                            }
+                        }
+                    }
+                    // Left side
+                    .textInfo 
+                    {
+                        .date 
+                        {
+                            font-size:39px;
+                            margin:0;
+                            span 
+                            {
+                                font-size:20px;
+                            }
+                        }
+                        h1 
+                        {
+                            font-family:rajdhaniRegular;
+                            font-size:52px;
+                            margin:0 0 26px 0;
+                            padding:0;
+                            text-align:initial;
+                        }
+                        h2 
+                        {
+                            color:$white;
+                            font-family:rajdhaniBold;
+                            font-size:29px;
+                            margin:0 0 22px 0;
+                        }
+                        .newsLine 
+                        {
+                            background:$white;
+                            height:1px;
+                            margin:0 0 46px 0;
+                            width:85%;
+                        }
+                    }
+                }
+                // Top images
+                .topArea 
+                {
+                    img 
+                    {
+                        height:auto;
+                        width:100%;
+                    }
+                }
+            }
+        }
+        .sectionContent 
+        {
+            @include sectionPadding;
+        }
+    }
+
+
+}
+
+
+// Screen size - max width - 275px
+@media (max-width:275px)
+{
+    body 
+    {
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        width:91%;
+                        .textInfo 
+                        {
+                            h1 
+                            {
+                                font-size:47px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (max-width:1400px)
+{
+    body 
+    {
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        width:91%;
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                width:100%;
+                                h2 
+                                {
+                                    text-align:center;
+                                }
+                                .smallerDevices 
+                                {
+                                    display:block;
+                                    margin:40px 0 0 0;
+                                }
+                            }
+                        }
+                        .textInfo 
+                        {
+                            .date 
+                            {
+                                margin:57px 0 0 0;
+                            }
+                            h1 
+                            {
+                                margin:28px 0 0 0;
+                                text-align:center;
+                            }
+                            h2 
+                            {
+                                margin:75px 0 0 0;
+                                text-align:center;
+                            }
+                            .newsLine 
+                            {
+                                margin:32px 0 0 0;
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1500px) 
+{
+    body 
+    {
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                h2 
+                                {
+                                    font-size:30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    body 
+    {
+        h1
+        {
+            @include h1_2400;
+        }
+        h2 
+        {
+            @include h2_2400;
+        }
+        h3
+        {
+            @include h3_2400;
+        }
+        h4 
+        {
+            @include h4_2400;
+        }
+        h5 
+        {
+            @include h5_2400;
+        }
+        .htmlLoader 
+        {
+            .container 
+            {
+                .ring 
+                {
+                    height:250px;
+                    width:250px;
+                }
+                .ring:nth-child(1)
+                {
+                    border-bottom-width:10px;
+                }
+                .ring:nth-child(2)
+                {
+                    border-right-width:10px;
+                }
+                .ring:nth-child(3)
+                {
+                    border-top-width:10px;
+                }
+                .scientisText
+                {
+                    font-size:20px;
+                }
+            }
+        }
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                margin:93px 0 93px 0;
+                                h2 
+                                {
+                                    font-size:40px;
+                                }
+                            }
+                        }
+                        .textInfo 
+                        {
+                            .date 
+                            {
+                                font-size:48px;
+                                span 
+                                {
+                                    font-size:25px;
+                                }
+                            }
+                            h1 
+                            {
+                                font-size:65px;
+                                margin:0 0 32px 0;
+                            }
+                            h2 
+                            {
+                                font-size:36px;
+                                margin:0 0 27px 0;
+                            }
+                            .newsLine 
+                            {
+                                height:1.01px;
+                                margin:0 0 57px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .sectionContent 
+            {
+                @include sectionPadding_2400;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    body 
+    {
+        h1
+        {
+            @include h1_3000;
+        }
+        h2 
+        {
+            @include h2_3000;
+        }
+        h3
+        {
+            @include h3_3000;
+        }
+        h4 
+        {
+            @include h4_3000;
+        }
+        h5 
+        {
+            @include h5_3000;
+        }
+        .htmlLoader 
+        {
+            .container 
+            {
+                .ring 
+                {
+                    height:312px;
+                    width:312px;
+                }
+                .ring:nth-child(1)
+                {
+                    border-bottom-width:12.5px;
+                }
+                .ring:nth-child(2)
+                {
+                    border-right-width:12.5px;
+                }
+                .ring:nth-child(3)
+                {
+                    border-top-width:12.5px;
+                }
+                .scientisText
+                {
+                    font-size:25px;
+                }
+            }
+        }
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                margin:116px 0 116px 0;
+                                h2 
+                                {
+                                    font-size:50px;
+                                }
+                            }
+                        }
+                        .textInfo 
+                        {
+                            .date 
+                            {
+                                font-size:60px;
+                                span 
+                                {
+                                    font-size:31px;
+                                }
+                            }
+                            h1 
+                            {
+                                font-size:81px;
+                                margin:0 0 40px 0;
+                            }
+                            h2 
+                            {
+                                font-size:45px;
+                                margin:0 0 33px 0;
+                            }
+                            .newsLine 
+                            {
+                                height:1.26px;
+                                margin:0 0 71px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .sectionContent 
+            {
+                @include sectionPadding_3000;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    body 
+    {
+        h1
+        {
+            @include h1_3750;
+        }
+        h2 
+        {
+            @include h2_3750;
+        }
+        h3
+        {
+            @include h3_3750;
+        }
+        h4 
+        {
+            @include h4_3750;
+        }
+        h5 
+        {
+            @include h5_3750;
+        }
+        .htmlLoader 
+        {
+            .container 
+            {
+                .ring 
+                {
+                    height:390px;
+                    width:390px;
+                }
+                .ring:nth-child(1)
+                {
+                    border-bottom-width:15.6px;
+                }
+                .ring:nth-child(2)
+                {
+                    border-right-width:15.6px;
+                }
+                .ring:nth-child(3)
+                {
+                    border-top-width:15.6px;
+                }
+                .scientisText
+                {
+                    font-size:31px;
+                }
+            }
+        }
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                margin:145px 0 145px 0;
+                                h2 
+                                {
+                                    font-size:62px;
+                                }
+                            }
+                        }
+                        .textInfo 
+                        {
+                            .date 
+                            {
+                                font-size:75px;
+                                span 
+                                {
+                                    font-size:38px;
+                                }
+                            }
+                            h1 
+                            {
+                                font-size:101px;
+                                margin:0 0 50px 0;
+                            }
+                            h2 
+                            {
+                                font-size:56px;
+                                margin:0 0 41px 0;
+                            }
+                            .newsLine 
+                            {
+                                height:1.57px;
+                                margin:0 0 88px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .sectionContent 
+            {
+                @include sectionPadding_3750;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px)
+{
+    body 
+    {
+        h1
+        {
+            @include h1_large;
+        }
+        h2 
+        {
+            @include h2_large;
+        }
+        h3
+        {
+            @include h3_large;
+        }
+        h4 
+        {
+            @include h4_large;
+        }
+        h5 
+        {
+            @include h5_large;
+        }
+        .htmlLoader 
+        {
+            .container 
+            {
+                .ring 
+                {
+                    height:488px;
+                    width:488px;
+                }
+                .ring:nth-child(1)
+                {
+                    border-bottom-width:19.5px;
+                }
+                .ring:nth-child(2)
+                {
+                    border-right-width:19.5px;
+                }
+                .ring:nth-child(3)
+                {
+                    border-top-width:19.5px;
+                }
+                .scientisText
+                {
+                    font-size:38px;
+                }
+            }
+        }
+        .mainContainer 
+        {
+            .newsSection 
+            {
+                .newsArea 
+                {
+                    .newsContent 
+                    {
+                        .textContainer 
+                        {
+                            .textNews 
+                            {
+                                margin:181px 0 181px 0;
+                                h2 
+                                {
+                                    font-size:77px;
+                                }
+                            }
+                        }
+                        .textInfo 
+                        {
+                            .date 
+                            {
+                                font-size:93px;
+                                span 
+                                {
+                                    font-size:47px;
+                                }
+                            }
+                            h1 
+                            {
+                                font-size:126px;
+                                margin:0 0 62px 0;
+                            }
+                            h2 
+                            {
+                                font-size:70px;
+                                margin:0 0 51px 0;
+                            }
+                            .newsLine 
+                            {
+                                height:1.96px;
+                                margin:0 0 110px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .sectionContent 
+            {
+                @include sectionPadding_large;
+            }
+        }
+    }
+}

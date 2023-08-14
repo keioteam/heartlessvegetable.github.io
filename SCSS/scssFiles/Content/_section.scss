@@ -1,0 +1,592 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- Section
+ - Import About
+ - Import Contact
+ - Import Footer
+ - Import Header
+ - Import News
+ - Import Projects
+ - Import Research
+ - Import Science
+ - Info
+  - H5
+ - Plus and Line
+  - Line Zone
+  - Plus
+   - Horizontal
+   - Vertical
+ - Section Content
+  - Button Element
+   - Button
+    - Button Area
+     - A
+      - A:Hover  
+     - .Img
+      - Img
+  - Content Area
+  - Heading Line
+  - Heading Width
+- Media Queries
+ - Max Width - 650px
+ - Other Screen Sizes
+
+*/
+
+
+// Sections
+section 
+{
+    // Import sections files
+    @import "../Sections/about";
+    @import "../Sections/contact";
+    @import "../Sections/footer";
+    @import "../Sections/header";
+    @import "../Sections/news";
+    @import "../Sections/projects";
+    @import "../Sections/research";
+    @import "../Sections/science";
+    .info
+    {
+        margin-left:60px;
+        h5 
+        {
+            margin:0;
+            padding:0;
+        }
+    }
+    // Plus and line - header and science
+    .plusAndLine 
+    {
+        margin:7px 0 0 0;
+        .lineZone 
+        {
+            background:$white;
+            bottom:13.5px;
+            height:1px;
+            left:60px;
+            position:relative;
+            width:calc(100% - 60px);
+        }
+        .plus 
+        {
+            bottom:12.5px;
+            height:25px;
+            margin:0;
+            padding:0;
+            position:relative;
+            .horizontal
+            {
+                background:$white;
+                bottom:0;
+                height:1px;
+                left:0;
+                position:absolute;
+                width:25px;
+            }
+            .vertical
+            {
+                background:$white;
+                bottom:0;
+                height:1px;
+                left:0;
+                position:absolute;
+                transform:rotate(90deg);
+                width:25px;
+            }
+        }
+    }
+    // Section content, paddings
+    .sectionContent
+    {
+        background:$sectionBackground;
+        padding-bottom:132px;
+        // Buttons
+        .buttonElement 
+        {
+            .button 
+            {
+                border:0.5px solid $buttonBorders;
+                border-radius:6px;
+                cursor:pointer;
+                display:inline-block;
+                &:hover 
+                {
+                    border-color:$loaderFirstShape;
+                }
+                .buttonArea 
+                {
+                    align-items:center;
+                    display:flex;
+                    padding:31px 25px 31px 25px;
+                    a 
+                    {
+                        color:$white;
+                        display:inline-block;
+                        font-family:rajdhaniRegular;
+                        font-size:30px;
+                        margin:0;
+                        padding:0;
+                        &:hover 
+                        {
+                            color:$white;
+                        }
+                    }
+                    .img 
+                    {
+                        display:inline-block;
+                        margin:0 0 0 47px;
+                        img 
+                        {
+                            display:inline-block;
+                            height:auto;
+                            margin:0;
+                            padding:0;
+                            width:35px;
+                        }
+                    }
+                }
+            }
+        }
+        .contentArea 
+        {
+            margin-top:160px;
+        }
+        .headingLine 
+        {
+            background:$loaderFirstShape;
+            height:3px;
+            margin-top:11px;
+            width:50px;
+        }
+        .headingWidth 
+        {
+            width:68.75%;
+        }
+    }
+}
+
+
+// Screen size - max width - 650px
+@media (max-width:650px)
+{
+    .sectionContent 
+    {
+        .buttonElement 
+        {
+            .button 
+            {
+                .buttonArea 
+                {
+                    padding:25px 20px 25px 20px !important;
+                    a 
+                    {
+                        font-size:24px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (min-width:651px) and (max-width:1600px)
+{
+    section 
+    {
+        .sectionContent 
+        {
+            .headingWidth 
+            {
+                width:100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px)
+{
+    .infoLine 
+    {
+        top:0;
+        h4 
+        {
+            text-align:center;
+        }
+        h5 
+        {
+            text-align:center;
+        }
+        .line 
+        {
+            display:none;
+        }
+    }
+    .plus 
+    {
+        display:none;
+    }
+    .sectionContent 
+    {
+        .buttonElement
+        {
+            display:flex;
+            justify-content:center;
+        }
+        .heading 
+        {
+            display:flex;
+            justify-content:center;
+            h3 
+            {
+                text-align:center;
+            }
+        }
+        .headingLineArea 
+        {
+            display:flex;
+            justify-content:center;
+        }
+    }
+}
+
+
+@media(min-width:1400px) and (max-width:1500px)
+{
+    .infoLine 
+    {
+        top:0;
+        h4 
+        {
+            text-align:center;
+        }
+        h5 
+        {
+            text-align:center;
+        }
+    }
+    .plus 
+    {
+        display:none;
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    section 
+    {
+        .info
+        {
+            margin-left:75px;
+        }
+        .plusAndLine 
+        {
+            margin:8.7px 0 0 0;
+            .lineZone 
+            {
+                bottom:16.9px;
+                height:1.25px;
+                left:75px;
+                width:calc(100% - 75px);
+            }
+            .plus 
+            {
+                bottom:15.6px;
+                height:31px;
+                left:15px;
+                position:relative;
+                .horizontal
+                {
+                    height:1.25px;
+                    width:31px;
+                }
+                .vertical
+                {
+                    height:1.25px;
+                    width:31px;
+                }
+            }
+        }
+        .sectionContent 
+        {
+            padding-bottom:165px;
+            .buttonElement 
+            {
+                .button 
+                {
+                    border:0.62px solid $white;
+                    border-radius:7.5px;
+                    .buttonArea 
+                    {
+                        padding:47px 38px 47px 38px;
+                        a 
+                        {
+                            font-size:37px;
+                        }
+                        .img 
+                        {
+                            margin:0 0 0 72px;
+                            img 
+                            {
+                                height:auto;
+                                width:43px;
+                            }
+                        }
+                    }
+                }
+            }
+            .contentArea 
+            {
+                margin-top:200px;
+            }
+            .headingLine 
+            {
+                height:3.7px;
+                margin-top:13px;
+                width:62px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    section 
+    {
+        .info
+        {
+            margin-left:93px;
+        }
+        .plusAndLine 
+        {
+            margin:10.8px 0 0 0;
+            .lineZone 
+            {
+                bottom:21.1px;
+                height:1.56px;
+                left:93px;
+                width:calc(100% - 93px);
+            }
+            .plus 
+            {
+                bottom:19.5px;
+                height:38px;
+                left:18px;
+                position:relative;
+                .horizontal
+                {
+                    height:1.56px;
+                    width:38px;
+                }
+                .vertical
+                {
+                    height:1.56px;
+                    width:38px;
+                }
+            }
+        }
+        .sectionContent 
+        {
+            padding-bottom:206px;
+            .buttonElement 
+            {
+                .button 
+                {
+                    border:0.77px solid $white;
+                    border-radius:9.3px;
+                    .buttonArea 
+                    {
+                        padding:58px 47px 58px 47px;
+                        a 
+                        {
+                            font-size:46px;
+                        }
+                        .img 
+                        {
+                            margin:0 0 0 90px;
+                            img 
+                            {
+                                height:auto;
+                                width:53px;
+                            }
+                        }
+                    }
+                }
+            }
+            .contentArea 
+            {
+                margin-top:250px;
+            }
+            .headingLine 
+            {
+                height:4.6px;
+                margin-top:16px;
+                width:77px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    section 
+    {
+        .info
+        {
+            margin-left:116px;
+        }
+        .plusAndLine 
+        {
+            margin:13.5px 0 0 0;
+            .lineZone 
+            {
+                bottom:26.4px;
+                height:1.95px;
+                left:116px;
+                width:calc(100% - 116px);
+            }
+            .plus 
+            {
+                bottom:24.3px;
+                height:47px;
+                left:22px;
+                position:relative;
+                .horizontal
+                {
+                    height:1.95px;
+                    width:47px;
+                }
+                .vertical
+                {
+                    height:1.95px;
+                    width:47px;
+                }
+            }
+        }
+        .sectionContent 
+        {
+            padding-bottom:258px;
+            .buttonElement 
+            {
+                .button 
+                {
+                    border:0.96px solid $white;
+                    border-radius:11.6px;
+                    .buttonArea 
+                    {
+                        padding:72px 58px 72px 58px;
+                        a 
+                        {
+                            font-size:57px;
+                        }
+                        .img 
+                        {
+                            margin:0 0 0 112px;
+                            img 
+                            {
+                                height:auto;
+                                width:66px;
+                            }
+                        }
+                    }
+                }
+            }
+            .contentArea 
+            {
+                margin-top:312px;
+            }
+            .headingLine 
+            {
+                height:5.7px;
+                margin-top:20px;
+                width:96px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) 
+{
+    section 
+    {
+        .info
+        {
+            margin-left:145px;
+        }
+        .plusAndLine 
+        {
+            margin:16.9px 0 0 0;
+            .lineZone 
+            {
+                bottom:33px;
+                height:2.43px;
+                left:145px;
+                width:calc(100% - 145px);
+            }
+            .plus 
+            {
+                bottom:30.4px;
+                height:58px;
+                left:27px;
+                position:relative;
+                .horizontal
+                {
+                    height:2.43px;
+                    width:58px;
+                }
+                .vertical
+                {
+                    height:2.43px;
+                    width:58px;
+                }
+            }
+        }
+        .sectionContent 
+        {
+            padding-bottom:323px;
+            .buttonElement 
+            {
+                .button 
+                {
+                    border:1.2px solid $white;
+                    border-radius:14.5px;
+                    .buttonArea 
+                    {
+                        padding:90px 72px 90px 72px;
+                        a 
+                        {
+                            font-size:71px;
+                        }
+                        .img 
+                        {
+                            margin:0 0 0 140px;
+                            img 
+                            {
+                                height:auto;
+                                width:82px;
+                            }
+                        }
+                    }
+                }
+            }
+            .contentArea 
+            {
+                margin-top:390px;
+            }
+            .headingLine 
+            {
+                height:7.1px;
+                margin-top:25px;
+                width:120px;
+            }
+        }
+    }
+}

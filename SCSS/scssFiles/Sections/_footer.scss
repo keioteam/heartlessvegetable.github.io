@@ -1,0 +1,270 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- Footer 
+ - Footer Social 
+  - A
+   - Img
+  - Footer Social Middle
+ - Logo
+  - A
+   - H1
+    - Sci Area
+    - Span
+ - Terraform
+  - H4
+- Media Queries
+ - Max Width - 300px
+ - Other Screen Sizes
+
+*/
+
+
+// Section (Footer)
+.footer 
+{
+    // Container (social icons)
+    .footerSocial 
+    {
+        margin:35px 0 0 0;
+        // Icons
+        a 
+        {
+            img 
+            {
+                height:auto;
+                width:61px;
+            }
+        }
+        .footerSocialMiddle 
+        {
+            margin:0 5px 0 5px;
+        }
+    }
+    // Logo text
+    .logo 
+    {
+        display:flex;
+        justify-content:center;
+        // Link on the top
+        a 
+        {
+            h1 
+            {
+                display:flex;
+                font-family:rajdhaniMedium;
+                font-size:72px;
+                .sciArea 
+                {
+                    color:$loaderFirstShape;
+                }
+                span 
+                {
+                    display:inline-block;
+                }
+            }
+        }
+    }
+    // Text on the bottom (Our mission is...)
+    .terraform 
+    {
+        margin:13px 0 0 0;
+        width:100%;
+        h4 
+        {
+            color:$white;
+            font-family:rajdhaniMedium;
+            font-size:24px;
+            text-align:center;
+        }
+    }
+}
+
+
+// Screen size (max width: 300px)
+@media (max-width:300px) 
+{
+    .footer 
+    {
+        .logo 
+        {
+            a 
+            {
+                h1 
+                {
+                    font-size:65px;
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (min-width:1921px) and (max-width:2400px)
+{
+    .footer 
+    {
+        .footerSocial 
+        {
+            margin:43px 0 0 0;
+            a 
+            {
+                img 
+                {
+                    height:auto;
+                    width:76px;
+                }
+            }
+            .footerSocialMiddle 
+            {
+                margin:0 6.2px 0 6.2px;
+            }
+        }
+        .logo 
+        {
+            a 
+            {
+                h1 
+                {
+                    font-size:90px;
+                }
+            }
+        }
+        .terraform 
+        {
+            margin:16px 0 0 0;
+            h4 
+            {
+                font-size:30px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    .footer 
+    {
+        .footerSocial 
+        {
+            margin:53px 0 0 0;
+            a 
+            {
+                img 
+                {
+                    height:auto;
+                    width:95px;
+                }
+            }
+            .footerSocialMiddle 
+            {
+                margin:0 7.7px 0 7.7px;
+            }
+        }
+        .logo 
+        {
+            a 
+            {
+                h1 
+                {
+                    font-size:112px;
+                }
+            }
+        }
+        .terraform 
+        {
+            margin:20px 0 0 0;
+            h4 
+            {
+                font-size:37px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    .footer 
+    {
+        .footerSocial 
+        {
+            margin:66px 0 0 0;
+            a 
+            {
+                img 
+                {
+                    height:auto;
+                    width:118px;
+                }
+            }
+            .footerSocialMiddle 
+            {
+                margin:0 9.6px 0 9.6px;
+            }
+        }
+        .logo 
+        {
+            a 
+            {
+                h1 
+                {
+                    font-size:140px;
+                }
+            }
+        }
+        .terraform 
+        {
+            margin:25px 0 0 0;
+            h4 
+            {
+                font-size:46px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) 
+{
+    .footer 
+    {
+        .footerSocial 
+        {
+            margin:82px 0 0 0;
+            a 
+            {
+                img 
+                {
+                    height:auto;
+                    width:147px;
+                }
+            }
+            .footerSocialMiddle 
+            {
+                margin:0 12px 0 12px;
+            }
+        }
+        .logo 
+        {
+            a 
+            {
+                h1 
+                {
+                    font-size:175px;
+                }
+            }
+        }
+        .terraform 
+        {
+            margin:31px 0 0 0;
+            h4 
+            {
+                font-size:57px;
+            }
+        }
+    }
+}

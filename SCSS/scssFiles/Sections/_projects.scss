@@ -1,0 +1,310 @@
+/*
+TABLE OF CONTENTS
+*****************
+
+- Projects
+ - Img Info
+  - Info Area
+   - Text, Button
+    - Bottom
+    - Button Element
+    - H2
+    - H4
+  - Info Area Bottom
+- Media Queries
+ - Max Width - 425px
+ - Other Screen Sizes
+
+*/
+
+
+// Section - Projects
+.projects
+{
+    // Images - large, and text and button over
+    .imgInfo
+    {
+        position:relative;
+        // Info area
+        .infoArea
+        {
+            background:$projectsInfo;
+            border-top-left-radius:10px;
+            bottom:0;
+            height:890px;
+            position:absolute;
+            right:0;
+            width:50%;
+            // Text and button over the top image
+            .textButton
+            {
+                margin:0 15px 0 82px;
+                .bottom 
+                {
+                    color:$projectsBlue;
+                    margin:38px 0 0 0;
+                }
+                .buttonElement
+                {
+                    margin:38px 0 0 0;
+                    .button 
+                    {
+                        border-color:$buttonBordersProjects;
+                        &:hover 
+                        {
+                            border-color:$buttonBorders;
+                        }
+                    }
+                }
+                h2 {
+                    color:$white;
+                    font-family:juraBold;
+                    font-size:39px;
+                    margin:28px 0 0 0;
+                }
+                h4 
+                {
+                    color:$loaderFirstShape;
+                    font-family:juraBold;
+                    font-size:27px;
+                }
+            }
+        }
+        .infoAreaBottom 
+        {
+            border-top-left-radius:0;
+            border-top-right-radius:10px;
+            left:0;
+        }
+    }
+}
+
+
+// Screen size - max width - 425px
+@media (max-width:425px)
+{
+    .projects 
+    {
+        .imgInfo 
+        {
+            .infoArea 
+            {
+                .textButton
+                {
+                    .buttonElement 
+                    {
+                        .button 
+                        {
+                            .buttonArea
+                            {
+                                padding:22px 18px 22px 18px !important;
+                            }
+                        }
+                    }
+                    h2 {
+                        font-size:22px;
+                    }
+                    h4 {
+                        font-size:16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Other screen sizes
+@media (max-width:1400px)
+{
+    .projects 
+    {
+        .imgInfo 
+        {
+            .infoArea 
+            {
+                display:flex;
+                justify-content:center;
+                position:relative;
+                width:100%;
+                .textButton 
+                {
+                    margin-left:0;
+                    margin-right:0;
+                    width:95%;
+                    h2 {
+                        text-align:center;
+                        width:100%;
+                    }
+                    h4 {
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px)
+{
+    .projects
+    {
+        .imgInfo
+        {
+            .infoArea
+            {
+                border-top-left-radius:12.5px;
+                height:750px;
+                .textButton
+                {
+                    margin:0 18px 0 102px;
+                    .bottom 
+                    {
+                        margin:47px 0 0 0;
+                    }
+                    .buttonElement
+                    {
+                        margin:47px 0 0 0;
+                    }
+                    h2 {
+                        font-size:48px;
+                        margin:35px 0 0 0;
+                    }
+                    h4 
+                    {
+                        font-size:33px;
+                    }
+                }
+            }
+            .infoAreaBottom 
+            {
+                border-top-left-radius:0;
+                border-top-right-radius:12.5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px)
+{
+    .projects
+    {
+        .imgInfo
+        {
+            .infoArea
+            {
+                border-top-left-radius:15.6px;
+                height:938px;
+                .textButton 
+                {
+                    margin:0 22px 0 127px;
+                    .bottom 
+                    {
+                        margin:58px 0 0 0;
+                    }
+                    .buttonElement
+                    {
+                        margin:58px 0 0 0;
+                    }
+                    h2 {
+                        font-size:60px;
+                        margin:43px 0 0 0;
+                    }
+                    h4 
+                    {
+                        font-size:41px;
+                    }
+                }
+            }
+            .infoAreaBottom 
+            {
+                border-top-left-radius:0;
+                border-top-right-radius:15.6px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px)
+{
+    .projects
+    {
+        .imgInfo
+        {
+            .infoArea
+            {
+                border-top-left-radius:19.5px;
+                height:1173px;
+                .textButton
+                {
+                    margin:0 27px 0 159px;
+                    .bottom 
+                    {
+                        margin:72px 0 0 0;
+                    }
+                    .buttonElement
+                    {
+                        margin:72px 0 0 0;
+                    }
+                    h2 {
+                        font-size:75px;
+                        margin:53px 0 0 0;
+                    }
+                    h4 
+                    {
+                        font-size:51px;
+                    }
+                }
+            }
+            .infoAreaBottom 
+            {
+                border-top-left-radius:0;
+                border-top-right-radius:19.5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) 
+{
+    .projects
+    {
+        .imgInfo
+        {
+            .infoArea
+            {
+                border-top-left-radius:24.3px;
+                height:1466px;
+                .textButton 
+                {
+                    margin:0 33px 0 199px;
+                    .bottom 
+                    {
+                        margin:90px 0 0 0;
+                    }
+                    .buttonElement
+                    {
+                        margin:90px 0 0 0;
+                    }
+                    h2 {
+                        font-size:93px;
+                        margin:66px 0 0 0;
+                    }
+                    h4 
+                    {
+                        font-size:63px;
+                    }
+                }
+            }
+            .infoAreaBottom 
+            {
+                border-top-left-radius:0;
+                border-top-right-radius:24.3px;
+            }
+        }
+    }
+}

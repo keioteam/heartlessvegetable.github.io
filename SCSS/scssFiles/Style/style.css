@@ -1,0 +1,3423 @@
+/* 
+
+*****************
+TABLE OF CONTENTS
+*****************
+
+- Fonts
+- Mixins
+- Mixins, Larger Screens
+- Variables
+- Body
+ - Included Mixins
+ - HTML Loader
+  - Container 
+   - Ring
+   - Child 1
+   - Child 2
+   - Child 3
+   - Scientis Text
+ - Keyframes
+ - Main Container
+  - Imports
+  - News Section
+   - News Area
+    - News Content
+     - Text Container
+      - Text News
+       - H2
+       - Smaller Devices
+     - Text Info
+      - Date
+       - Span
+      - H1
+      - H2
+      - News Line
+    - Top Area
+     - Img
+  - Section Content
+- Media Queries
+
+*/
+@font-face {
+  font-family: "blinkerRegular";
+  src: url("../../../Fonts/Blinker/Blinker-Regular.ttf");
+}
+@font-face {
+  font-family: "juraBold";
+  src: url("../../../Fonts/Jura/Jura-Bold.ttf");
+}
+@font-face {
+  font-family: "megrim";
+  src: url("../../../Fonts/Megrim/Megrim-Regular.ttf");
+}
+@font-face {
+  font-family: "rajdhaniBold";
+  src: url("../../../Fonts/Rajdhani/Rajdhani-Bold.ttf");
+}
+@font-face {
+  font-family: "rajdhaniMedium";
+  src: url("../../../Fonts/Rajdhani/Rajdhani-Medium.ttf");
+}
+@font-face {
+  font-family: "rajdhaniRegular";
+  src: url("../../../Fonts/Rajdhani/Rajdhani-Regular.ttf");
+}
+body {
+  overflow-x: hidden;
+}
+body a {
+  color: #ffffff;
+  text-decoration: none;
+}
+body h1 {
+  color: #ffffff;
+  font-family: megrim;
+  font-size: 144px;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  text-align: center;
+}
+body h2 {
+  color: #ffffff;
+  display: inline-block;
+  font-family: rajdhaniMedium;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+body h3 {
+  color: #ffffff;
+  display: inline-block;
+  font-family: juraBold;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+body h4 {
+  color: #ffffff;
+  font-family: rajdhaniBold;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+}
+body h5 {
+  color: #ffffff;
+  font-family: rajdhaniMedium;
+  font-size: 21px;
+  margin: 0;
+}
+body .htmlLoader {
+  background: #0a0016;
+  height: 100vh;
+  width: 100vw;
+}
+body .htmlLoader .container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body .htmlLoader .container .ring {
+  border: 0px solid #0a0016;
+  border-radius: 50%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 200px;
+}
+body .htmlLoader .container .ring:nth-child(1) {
+  animation: rotateOne 2s linear infinite;
+  border-bottom-width: 8px;
+  border-color: #b590d8;
+}
+body .htmlLoader .container .ring:nth-child(2) {
+  animation: rotateTwo 2s linear infinite;
+  border-right-width: 8px;
+  border-color: #5fabf3;
+}
+body .htmlLoader .container .ring:nth-child(3) {
+  animation: rotateThree 2s linear infinite;
+  border-top-width: 8px;
+  border-color: #222225;
+}
+body .htmlLoader .container .scientisText {
+  color: #ffffff;
+  font-family: blinkerRegular;
+}
+@keyframes rotateOne {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotateThree {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+@keyframes rotateTwo {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+body .mainContainer {
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Section
+   - Import About
+   - Import Contact
+   - Import Footer
+   - Import Header
+   - Import News
+   - Import Projects
+   - Import Research
+   - Import Science
+   - Info
+    - H5
+   - Plus and Line
+    - Line Zone
+    - Plus
+     - Horizontal
+     - Vertical
+   - Section Content
+    - Button Element
+     - Button
+      - Button Area
+       - A
+        - A:Hover  
+       - .Img
+        - Img
+    - Content Area
+    - Heading Line
+    - Heading Width
+  - Media Queries
+   - Max Width - 650px
+   - Other Screen Sizes
+
+  */
+  display: none;
+  position: absolute;
+  top: 0;
+}
+body .mainContainer section {
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - About
+   - Left
+    - Subheading
+     - H1
+    - Text
+     - Info Text
+   - Right
+    - Img Container
+    - Line Area
+     - Line
+    - Opacity Layer
+     - Center Text
+      - H2
+  - Media Queries
+   - Max Width - 650px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Contact
+   - Contact Container
+    - Contact Left
+     - Contact Info
+      - Info Content
+       - Contact Social
+        - Social Icon
+         - Img
+        - Social Icon Middle
+       - Info Container
+        - Info Heading
+         - H3
+        - Info Text Area
+         - A 
+         - H3
+       - Info Container Margin
+       - Info Container Margin Bottom
+    - Contact Right
+     - Form
+      - Form Container
+       - Data Button
+        - Button Area
+        - Field Button
+        - Field Message
+        - Mozilla, Placeholder
+       - Form Margin
+       - Messages
+        - Error 
+        - Submitted
+   - Question
+    - H3
+   - Reach
+    - H1
+  - Media Queries
+   - Max Width - 325px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Footer 
+   - Footer Social 
+    - A
+     - Img
+    - Footer Social Middle
+   - Logo
+    - A
+     - H1
+      - Sci Area
+      - Span
+   - Terraform
+    - H4
+  - Media Queries
+   - Max Width - 300px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Header
+   - Content
+    - Bottom
+     - Info
+      - Info Line
+       - Line
+      - Plus
+       - Horizontal
+       - Vertical
+      - Social Area
+       - A
+        - Hover
+       - End
+       - Social
+       - Social Line
+    - Middle Container
+    - Top Container
+     - Top
+      - Logo
+       - H2
+        - Sci
+        - Span
+      - Navbar
+       - Ul
+        - Li 
+         - A
+        - Navbar Contact
+   - Phone Menu
+    - Links Area
+     - Ul
+      - Li
+       - A
+  - Change Menu
+   - Content
+    - Top Container
+     - Top
+      - Logo
+   - Hamburger Menu
+    - Hamburger Line Bottom
+    - Hamburger Line Middle
+    - Hamburger Line Top
+   - Phone Menu
+  - Media Queries
+   - Max Height:360px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - News
+   - Content Area
+    - Left News
+     - Block
+      - Line Bottom
+      - Line Padding
+      - Line Projects
+       - Line
+      - Link
+       - A
+       - Ground Mars
+      - White
+     - Planet Area
+      - Planet
+       - Img
+      - Text
+       - H1
+    - Right News
+     - Launching
+     - News Content 
+      - Info Block
+       - Button Zone
+       - Info Block Area
+        - H1
+        - H3
+        - H4
+      - Info Block Bottom
+     - Orbit
+  - Media Queries
+   - Max Width - 250px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Projects
+   - Img Info
+    - Info Area
+     - Text, Button
+      - Bottom
+      - Button Element
+      - H2
+      - H4
+    - Info Area Bottom
+  - Media Queries
+   - Max Width - 425px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Research
+   - Below Heading
+    - Block
+     - Atom Img
+     - Computer Img
+     - H3
+     - H4
+     - Img
+     - Line
+  - Media Queries
+   - Max Width - 650px
+   - Other Screen Sizes
+
+  */
+  /*
+  TABLE OF CONTENTS
+  *****************
+
+  - Science
+   - Info Col
+    - Info Section
+     - H4
+     - Science Heading
+      - H1
+   - Projects
+    - Block
+     - Block Container
+      - Img
+      - Plus and Line
+       - Line Science
+  - Media Queries
+   - Max Width - 300px
+   - Other Screen Sizes
+
+  */
+}
+body .mainContainer section .about {
+  margin: 0;
+  padding: 0;
+  width: 68.75%;
+}
+body .mainContainer section .about .left .subheading h1 {
+  color: #ffffff;
+  display: inline-block;
+  font-family: rajdhaniRegular;
+  font-size: 64px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: start;
+}
+body .mainContainer section .about .left .text .infoText {
+  font-family: rajdhaniRegular;
+  margin-bottom: 77px;
+  margin-top: 23px;
+  width: 91.8%;
+}
+body .mainContainer section .about .right {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+body .mainContainer section .about .right .imgContainer {
+  width: 89.2%;
+}
+body .mainContainer section .about .right .imgContainer img {
+  border-radius: 10px;
+}
+body .mainContainer section .about .right .lineArea {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+body .mainContainer section .about .right .lineArea .line {
+  background: #ffffff;
+  height: 0.77%;
+  width: 30.6%;
+}
+body .mainContainer section .about .right .opacityLayer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  height: 100%;
+  width: 89.2%;
+}
+body .mainContainer section .about .right .opacityLayer .centerText {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+body .mainContainer section .about .right .opacityLayer .centerText h2 {
+  display: block;
+  font-family: rajdhaniBold;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  body .mainContainer section .about {
+    width: 95%;
+  }
+  body .mainContainer section .about .left .subheading h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    font-size: 24px;
+  }
+  body .mainContainer section .about .right .imgContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    width: 100%;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    right: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 651px) and (max-width: 1200px) {
+  body .mainContainer section .about .right .imgContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    width: 75%;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    right: 12.5%;
+    width: 75%;
+  }
+}
+@media (min-width: 651px) and (max-width: 1600px) {
+  body .mainContainer section .about {
+    width: 80%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  body .mainContainer section .about .right .imgContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    width: 50%;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    right: 25%;
+    width: 50%;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .about .left .subheading {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .about .left .text {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    text-align: center;
+  }
+  body .mainContainer section .about .right {
+    margin-top: 15%;
+  }
+  body .mainContainer section .about .right .lineArea {
+    align-items: start;
+    justify-content: center;
+  }
+  body .mainContainer section .about .right .lineArea .line {
+    transform: rotate(90deg);
+    width: 15%;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .about .left .subheading h1 {
+    font-size: 80px;
+    margin: 25px 0 0 0;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    margin-bottom: 96px;
+    margin-top: 28px;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    border-radius: 12.5px;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    border-radius: 12.5px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .about .left .subheading h1 {
+    font-size: 100px;
+    margin: 31px 0 0 0;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    margin-bottom: 120px;
+    margin-top: 35px;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    border-radius: 15.6px;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    border-radius: 15.6px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .about .left .subheading h1 {
+    font-size: 125px;
+    margin: 38px 0 0 0;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    margin-bottom: 150px;
+    margin-top: 43px;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    border-radius: 19.5px;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    border-radius: 19.5px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .about .left .subheading h1 {
+    font-size: 156px;
+    margin: 47px 0 0 0;
+  }
+  body .mainContainer section .about .left .text .infoText {
+    margin-bottom: 187px;
+    margin-top: 53px;
+  }
+  body .mainContainer section .about .right .imgContainer img {
+    border-radius: 24.3px;
+  }
+  body .mainContainer section .about .right .opacityLayer {
+    border-radius: 24.3px;
+  }
+}
+body .mainContainer section .contact {
+  width: 84%;
+}
+body .mainContainer section .contact .contactContainer {
+  margin-top: 62px;
+}
+body .mainContainer section .contact .contactContainer .contactLeft {
+  height: 100%;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+  align-items: center;
+  background: #131313;
+  border-radius: 10px;
+  display: flex;
+  height: 619px;
+  width: 85%;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent {
+  margin: 0 0 0 11%;
+  width: 100%;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial {
+  display: inline;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+  height: auto;
+  width: 61px;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIconMiddle {
+  margin: 0 5px 0 5px;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoHeading h3 {
+  font-family: rajdhaniBold;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea a {
+  color: #d9e6e1;
+  font-family: rajdhaniBold;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea h3 {
+  color: #d9e6e1;
+  font-family: rajdhaniBold;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMargin {
+  margin: 43px 0 0 0;
+}
+body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMarginBottom {
+  margin-bottom: 43px;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+  padding: 15px 0 15px 0 !important;
+  width: 56% !important;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+  background: transparent;
+  border: 1px solid #382c44;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: rajdhaniRegular;
+  font-size: 30px;
+  margin: 0;
+  outline: none;
+  padding: 15px 0 15px 13%;
+  width: 92%;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton:hover {
+  border-color: #8a3dc9;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldMessage {
+  height: 366px;
+  padding: 30px 0 30px 6.5%;
+  width: 100%;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton ::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMargin {
+  margin: 40px 0 0 0;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .error {
+  background: #fe8b8e;
+  color: #000000;
+  font-family: blinkerRegular;
+  font-size: 20px;
+  padding: 0;
+  text-align: center;
+}
+body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .submitted {
+  background: #97eedd;
+  color: #000000;
+  font-family: blinkerRegular;
+  font-size: 20px;
+  padding: 0;
+  text-align: center;
+}
+body .mainContainer section .contact .question {
+  margin-top: 21px;
+}
+body .mainContainer section .contact .question h3 {
+  font-family: rajdhaniBold;
+}
+body .mainContainer section .contact .reach h1 {
+  font-family: rajdhaniBold;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+@media (max-width: 325px) {
+  body .mainContainer section .contact .contactContainer .contactRight form {
+    margin: 0;
+    padding: 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer {
+    margin: 0;
+    padding: 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton {
+    width: 100%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+    width: 100%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMarginResponsive {
+    margin: 40px 0 0 0;
+  }
+}
+@media (max-width: 450px) {
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+    height: auto;
+    width: 55px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoHeading h3 {
+    font-size: 22px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea div h3 {
+    font-size: 22px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea div h3 a {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    width: 56%;
+  }
+}
+@media (min-width: 501px) and (max-width: 1400px) {
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    width: 28% !important;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .contact .contactContainer .contactLeft {
+    margin: 106px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+    height: initial;
+    padding: 25px 0 25px 0;
+    width: 100%;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent {
+    margin: 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial div .socialIconMiddle {
+    margin: 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoHeading {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoHeading h3 {
+    text-align: center;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea div {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea div h3 {
+    text-align: center;
+  }
+  body .mainContainer section .contact .question {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainContainer section .contact .question h3 {
+    display: inline-block;
+    text-align: center;
+  }
+  body .mainContainer section .contact .reach h1 {
+    text-align: center;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .contact .contactContainer {
+    margin-top: 77px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+    border-radius: 12.5px;
+    height: 899px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+    height: auto;
+    width: 76px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIconMiddle {
+    margin: 0 6.2px 0 6.2px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea a {
+    font-size: 37px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMargin {
+    margin: 53px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMarginBottom {
+    margin-bottom: 53px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    padding: 18px 0 18px 0 !important;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+    border: 1.25px solid #382c44;
+    border-radius: 6.2px;
+    font-size: 37px;
+    padding: 18px 0 18px 13%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldMessage {
+    height: 458px;
+    padding: 37px 0 37px 6.5%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMargin {
+    margin: 50px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs {
+    margin: 12.5px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .error {
+    font-size: 25px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .submitted {
+    font-size: 25px;
+  }
+  body .mainContainer section .contact .question {
+    margin-top: 26px;
+  }
+  body .mainContainer section .contact .reach h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .contact .contactContainer {
+    margin-top: 96px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+    border-radius: 15.6px;
+    height: 1124px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+    height: auto;
+    width: 95px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIconMiddle {
+    margin: 0 7.7px 0 7.7px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea a {
+    font-size: 46px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMargin {
+    margin: 66px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMarginBottom {
+    margin-bottom: 66px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    padding: 22px 0 22px 0 !important;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+    border: 1.56px solid #382c44;
+    border-radius: 7.7px;
+    font-size: 46px;
+    padding: 22px 0 22px 13%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldMessage {
+    height: 573px;
+    padding: 46px 0 46px 6.5%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMargin {
+    margin: 62px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs {
+    margin: 15.6px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .error {
+    font-size: 31px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .submitted {
+    font-size: 31px;
+  }
+  body .mainContainer section .contact .question {
+    margin-top: 32px;
+  }
+  body .mainContainer section .contact .reach h1 {
+    font-size: 62px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .contact .contactContainer {
+    margin-top: 120px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+    border-radius: 19.5px;
+    height: 1405px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+    height: auto;
+    width: 118px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIconMiddle {
+    margin: 0 9.6px 0 9.6px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea a {
+    font-size: 57px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMargin {
+    margin: 82px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMarginBottom {
+    margin-bottom: 82px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    padding: 27px 0 27px 0 !important;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+    border: 1.95px solid #382c44;
+    border-radius: 9.6px;
+    font-size: 57px;
+    padding: 27px 0 27px 13%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldMessage {
+    height: 716px;
+    padding: 57px 0 57px 6.5%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMargin {
+    margin: 77px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs {
+    margin: 19.5px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .error {
+    font-size: 38px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .submitted {
+    font-size: 38px;
+  }
+  body .mainContainer section .contact .question {
+    margin-top: 40px;
+  }
+  body .mainContainer section .contact .reach h1 {
+    font-size: 77px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .contact .contactContainer {
+    margin-top: 150px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo {
+    border-radius: 24.3px;
+    height: 1756px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIcon img {
+    height: auto;
+    width: 147px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .contactSocial .socialIconMiddle {
+    margin: 0 12px 0 12px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainer .infoTextArea a {
+    font-size: 71px;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMargin {
+    margin: 103px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactLeft .contactInfo .infoContent .infoContainerMarginBottom {
+    margin-bottom: 103px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .buttonArea {
+    padding: 33px 0 33px 0 !important;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldButton {
+    border: 2.43px solid #382c44;
+    border-radius: 12px;
+    font-size: 71px;
+    padding: 33px 0 33px 13%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .dataButton .fieldMessage {
+    height: 895px;
+    padding: 71px 0 71px 6.5%;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .formMargin {
+    margin: 96px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs {
+    margin: 24.3px 0 0 0;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .error {
+    font-size: 47px;
+  }
+  body .mainContainer section .contact .contactContainer .contactRight form .formContainer .msgs .submitted {
+    font-size: 47px;
+  }
+  body .mainContainer section .contact .question {
+    margin-top: 50px;
+  }
+  body .mainContainer section .contact .reach h1 {
+    font-size: 96px;
+  }
+}
+body .mainContainer section .footer .footerSocial {
+  margin: 35px 0 0 0;
+}
+body .mainContainer section .footer .footerSocial a img {
+  height: auto;
+  width: 61px;
+}
+body .mainContainer section .footer .footerSocial .footerSocialMiddle {
+  margin: 0 5px 0 5px;
+}
+body .mainContainer section .footer .logo {
+  display: flex;
+  justify-content: center;
+}
+body .mainContainer section .footer .logo a h1 {
+  display: flex;
+  font-family: rajdhaniMedium;
+  font-size: 72px;
+}
+body .mainContainer section .footer .logo a h1 .sciArea {
+  color: #b590d8;
+}
+body .mainContainer section .footer .logo a h1 span {
+  display: inline-block;
+}
+body .mainContainer section .footer .terraform {
+  margin: 13px 0 0 0;
+  width: 100%;
+}
+body .mainContainer section .footer .terraform h4 {
+  color: #ffffff;
+  font-family: rajdhaniMedium;
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 300px) {
+  body .mainContainer section .footer .logo a h1 {
+    font-size: 65px;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .footer .footerSocial {
+    margin: 43px 0 0 0;
+  }
+  body .mainContainer section .footer .footerSocial a img {
+    height: auto;
+    width: 76px;
+  }
+  body .mainContainer section .footer .footerSocial .footerSocialMiddle {
+    margin: 0 6.2px 0 6.2px;
+  }
+  body .mainContainer section .footer .logo a h1 {
+    font-size: 90px;
+  }
+  body .mainContainer section .footer .terraform {
+    margin: 16px 0 0 0;
+  }
+  body .mainContainer section .footer .terraform h4 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .footer .footerSocial {
+    margin: 53px 0 0 0;
+  }
+  body .mainContainer section .footer .footerSocial a img {
+    height: auto;
+    width: 95px;
+  }
+  body .mainContainer section .footer .footerSocial .footerSocialMiddle {
+    margin: 0 7.7px 0 7.7px;
+  }
+  body .mainContainer section .footer .logo a h1 {
+    font-size: 112px;
+  }
+  body .mainContainer section .footer .terraform {
+    margin: 20px 0 0 0;
+  }
+  body .mainContainer section .footer .terraform h4 {
+    font-size: 37px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .footer .footerSocial {
+    margin: 66px 0 0 0;
+  }
+  body .mainContainer section .footer .footerSocial a img {
+    height: auto;
+    width: 118px;
+  }
+  body .mainContainer section .footer .footerSocial .footerSocialMiddle {
+    margin: 0 9.6px 0 9.6px;
+  }
+  body .mainContainer section .footer .logo a h1 {
+    font-size: 140px;
+  }
+  body .mainContainer section .footer .terraform {
+    margin: 25px 0 0 0;
+  }
+  body .mainContainer section .footer .terraform h4 {
+    font-size: 46px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .footer .footerSocial {
+    margin: 82px 0 0 0;
+  }
+  body .mainContainer section .footer .footerSocial a img {
+    height: auto;
+    width: 147px;
+  }
+  body .mainContainer section .footer .footerSocial .footerSocialMiddle {
+    margin: 0 12px 0 12px;
+  }
+  body .mainContainer section .footer .logo a h1 {
+    font-size: 175px;
+  }
+  body .mainContainer section .footer .terraform {
+    margin: 31px 0 0 0;
+  }
+  body .mainContainer section .footer .terraform h4 {
+    font-size: 57px;
+  }
+}
+body .mainContainer section .header {
+  background: url("../../../Images/Header/header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 5000px rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+}
+body .mainContainer section .header .content {
+  height: 81.5%;
+  position: relative;
+  width: 90.09%;
+}
+body .mainContainer section .header .content .bottom .infoZone .info .infoSmall {
+  display: none;
+}
+body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+  width: 200px;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea {
+  bottom: 11.5px;
+  position: relative;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea a {
+  display: inline-block;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea a:hover {
+  color: #c83939;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea .end {
+  color: #ffffff;
+  font-family: rajdhaniRegular;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea .social {
+  color: #ffffff;
+  font-family: rajdhaniRegular;
+  font-size: 24px;
+  margin-right: 32px;
+  padding: 0;
+}
+body .mainContainer section .header .content .bottom .infoZone .socialArea .socialLine {
+  background: #ffffff;
+  height: 1px;
+  margin-top: 20px;
+  width: 150px;
+}
+body .mainContainer section .header .content .middleContainer {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+body .mainContainer section .header .content .middleContainer .middle h1 {
+  color: #ffffff;
+}
+body .mainContainer section .header .content .stickyMenu {
+  background: rgba(23, 17, 43, 0.75);
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+body .mainContainer section .header .content .stickyMenu .top {
+  width: 90.09% !important;
+}
+body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+  padding: 35px 0 35px 0;
+}
+body .mainContainer section .header .content .topContainer .top {
+  position: relative;
+  width: 99.5%;
+  z-index: 2;
+}
+body .mainContainer section .header .content .topContainer .top .logo {
+  display: inline-block;
+}
+body .mainContainer section .header .content .topContainer .top .logo h2 {
+  font-size: 0px;
+}
+body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+  color: #b590d8;
+  display: inline-block;
+  font-size: 36px;
+}
+body .mainContainer section .header .content .topContainer .top .logo h2 span {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 36px;
+}
+body .mainContainer section .header .content .topContainer .top .navbar {
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .header .content .topContainer .top .navbar ul {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .header .content .topContainer .top .navbar ul li {
+  display: inline;
+  margin: 0;
+  margin-right: 81px;
+  padding: 0;
+}
+body .mainContainer section .header .content .topContainer .top .navbar ul li a {
+  color: #ffffff;
+  font-family: rajdhaniMedium;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .header .content .topContainer .top .navbar ul li a:hover {
+  color: #8a3dc9;
+}
+body .mainContainer section .header .content .topContainer .top .navbar ul .navbarContact {
+  margin-right: 0;
+}
+body .mainContainer section .header .hamburgerMenuArea {
+  background: rgba(226, 120, 134, 0.5);
+  margin: 0;
+  padding: 4px 15px 15px 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+body .mainContainer section .header .hamburgerMenuArea .hamburgerMenu {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  height: 34px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+}
+body .mainContainer section .header .hamburgerMenuArea .hamburgerMenu .hamburgerLineBottom {
+  background: #ffffff;
+  height: 2px;
+  left: 25%;
+  position: relative;
+  transition: all 0.8s;
+  width: 75%;
+}
+body .mainContainer section .header .hamburgerMenuArea .hamburgerMenu .hamburgerLineMiddle {
+  background: #ffffff;
+  height: 2px;
+  transition: all 0.8s;
+  width: 100%;
+}
+body .mainContainer section .header .hamburgerMenuArea .hamburgerMenu .hamburgerLineTop {
+  background: #ffffff;
+  height: 2px;
+  transition: all 0.8s;
+  width: 75%;
+}
+body .mainContainer section .header .phoneMenu {
+  align-items: center;
+  background: #242427;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: -100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+body .mainContainer section .header .phoneMenu .linksArea {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body .mainContainer section .header .phoneMenu .linksArea ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .header .phoneMenu .linksArea ul li {
+  display: flex;
+  justify-content: center;
+}
+body .mainContainer section .header .phoneMenu .linksArea ul li a {
+  font-family: rajdhaniMedium;
+  font-size: 24px;
+  margin: 2%;
+  text-align: center;
+}
+body .mainContainer section .header .phoneMenu .linksArea ul li a:hover {
+  color: #8a3dc9;
+}
+body .mainContainer section .changeMenu .content .topContainer .top {
+  z-index: 3;
+}
+body .mainContainer section .changeMenu .content .topContainer .top .navbar .hamburgerMenu {
+  z-index: 5;
+}
+body .mainContainer section .changeMenu .phoneMenu {
+  left: 0;
+  transition: left 2s;
+}
+body .mainContainer section .changeMenu .hamburgerLineBottom {
+  transform: rotateZ(405deg) translate(-8px, -6px);
+}
+body .mainContainer section .changeMenu .hamburgerLineMiddle {
+  opacity: 0;
+}
+body .mainContainer section .changeMenu .hamburgerLineTop {
+  transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+@media (max-height: 360px) {
+  body .mainContainer section .header .content .bottom {
+    display: none;
+  }
+  body .mainContainer section .header .content .middleContainer .middle h1 {
+    font-size: 76px;
+  }
+  body .mainContainer section .header .content .middleContainer .middle h2 {
+    font-size: 19px;
+  }
+}
+@media (min-height: 361px) and (max-height: 720px) {
+  body .mainContainer section .header .bottom .infoZone {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  body .mainContainer section .header .content .topContainer .top .logo {
+    visibility: hidden;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar {
+    width: 100%;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu {
+    top: 4%;
+  }
+}
+@media (max-width: 425px) {
+  body .mainContainer section .header .content .middleContainer .middle h1 {
+    font-size: 76px;
+  }
+  body .mainContainer section .header .content .middleContainer .middle h2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 575px) {
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    color: #fbc5dd;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .header .content .bottom .colFive .socialArea {
+    bottom: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  body .mainContainer section .header .content .bottom .colFive .socialArea a {
+    display: inline-block;
+  }
+  body .mainContainer section .header .content .bottom .colFive .socialArea .socialLine {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .colFour {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .colOne {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .colThree {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .colTwo {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .info {
+    margin: 0;
+    padding: 0;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .info h4 {
+    text-align: center;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .info h5 {
+    text-align: center;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine {
+    display: none;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+    padding: 11px 0 11px 0;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 .sci {
+    color: #fbc5dd;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 {
+    display: inline-block;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    color: #fbc5dd;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul {
+    display: none !important;
+  }
+  body .mainContainer section .header .hamburgerMenuArea {
+    visibility: visible;
+  }
+}
+@media (min-width: 1400px) {
+  body .mainContainer section .changeMenu .content .topContainer .top {
+    z-index: 3;
+  }
+  body .mainContainer section .changeMenu .content .topContainer .top .logo {
+    visibility: visible;
+  }
+  body .mainContainer section .changeMenu .content .topContainer .top .navbar .hamburgerMenu {
+    z-index: 5;
+  }
+  body .mainContainer section .changeMenu .phoneMenu {
+    left: -100vw;
+    transition: left 2s;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+  body .mainContainer section .header .content .bottom .colFive {
+    display: none !important;
+  }
+  body .mainContainer section .header .content .bottom .colFive .socialArea a {
+    display: inline-block;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .info {
+    bottom: 15px;
+    position: relative;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .plus {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea {
+    bottom: 0;
+  }
+}
+@media (min-width: 1501px) and (max-width: 1650px) {
+  body .mainContainer section .header .content .bottom .infoZone .info .infoLarge {
+    display: none;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .info .infoSmall {
+    display: block;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+    width: 165px;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+    width: 250px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea {
+    bottom: 14.1px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .end {
+    font-size: 30px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .social {
+    font-size: 30px;
+    margin-right: 40px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .socialLine {
+    height: 1.25px;
+    margin-top: 25px;
+    width: 187px;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+    padding: 43px 0 43px 0;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    font-size: 45px;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 span {
+    font-size: 45px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu {
+    height: 42px;
+    width: 60px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineBottom {
+    height: 2.5px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineMiddle {
+    height: 2.5px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineTop {
+    background: #ffffff;
+    height: 2.5px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li {
+    margin-right: 101px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li a {
+    font-size: 30px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+    width: 312px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea {
+    bottom: 17.6px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .end {
+    font-size: 37px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .social {
+    font-size: 37px;
+    margin-right: 50px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .socialLine {
+    height: 1.56px;
+    margin-top: 31px;
+    width: 234px;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+    padding: 53px 0 53px 0;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    font-size: 56px;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 span {
+    font-size: 56px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu {
+    height: 52px;
+    width: 75px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineBottom {
+    height: 3.1px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineMiddle {
+    height: 3.1px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineTop {
+    background: #ffffff;
+    height: 3.1px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li {
+    margin-right: 126px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li a {
+    font-size: 37px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+    width: 390px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea {
+    bottom: 22px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .end {
+    font-size: 46px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .social {
+    font-size: 46px;
+    margin-right: 62px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .socialLine {
+    height: 1.95px;
+    margin-top: 38px;
+    width: 293px;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+    padding: 66px 0 66px 0;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    font-size: 70px;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 span {
+    font-size: 70px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu {
+    height: 65px;
+    width: 93px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineBottom {
+    height: 3.8px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineMiddle {
+    height: 3.8px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineTop {
+    background: #ffffff;
+    height: 3.8px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li {
+    margin-right: 157px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li a {
+    font-size: 46px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .header .content .bottom .infoZone .plusAndLine .lineHeader {
+    width: 488px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea {
+    bottom: 27px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .end {
+    font-size: 57px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .social {
+    font-size: 57px;
+    margin-right: 77px;
+  }
+  body .mainContainer section .header .content .bottom .infoZone .socialArea .socialLine {
+    height: 2.43px;
+    margin-top: 47px;
+    width: 366px;
+  }
+  body .mainContainer section .header .content .stickyMenu .top .logo h2 {
+    padding: 82px 0 82px 0;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 .sci {
+    font-size: 87px;
+  }
+  body .mainContainer section .header .content .topContainer .top .logo h2 span {
+    font-size: 87px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu {
+    height: 81px;
+    width: 116px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineBottom {
+    height: 4.7px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineMiddle {
+    height: 4.7px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar .hamburgerMenu .hamburgerLineTop {
+    background: #ffffff;
+    height: 4.7px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li {
+    margin-right: 196px;
+  }
+  body .mainContainer section .header .content .topContainer .top .navbar ul li a {
+    font-size: 57px;
+  }
+}
+body .mainContainer section .news {
+  margin: 0;
+  width: 100%;
+}
+body .mainContainer section .news .contentArea {
+  width: 100%;
+}
+body .mainContainer section .news .contentArea .leftNews {
+  border-right: 1px solid #ffffff;
+  width: 68%;
+}
+body .mainContainer section .news .contentArea .leftNews .block .lineBottom {
+  padding-bottom: 0 !important;
+}
+body .mainContainer section .news .contentArea .leftNews .block .linePadding {
+  padding-top: 76px;
+}
+body .mainContainer section .news .contentArea .leftNews .block .lineProjects {
+  padding-bottom: 76px;
+  width: 100%;
+}
+body .mainContainer section .news .contentArea .leftNews .block .lineProjects .line {
+  background: #ffffff;
+  height: 1px;
+  width: 100%;
+}
+body .mainContainer section .news .contentArea .leftNews .block .link a {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: rajdhaniBold;
+  font-size: 36px;
+  margin-left: 9.17%;
+}
+body .mainContainer section .news .contentArea .leftNews .block .link .groundMars {
+  color: #b590d8;
+}
+body .mainContainer section .news .contentArea .leftNews .block .white {
+  color: #ffffff;
+}
+body .mainContainer section .news .contentArea .leftNews .planetArea .planet img {
+  width: 50%;
+}
+body .mainContainer section .news .contentArea .leftNews .planetArea .text {
+  margin: 16px 0 0 10%;
+}
+body .mainContainer section .news .contentArea .leftNews .planetArea .text h1 {
+  font-family: rajdhaniBold;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+body .mainContainer section .news .contentArea .rightNews {
+  border-top: 1px solid #ffffff;
+  position: relative;
+  width: 32%;
+}
+body .mainContainer section .news .contentArea .rightNews .launching {
+  display: none;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+  margin: 100px 0 0 8.9%;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .buttonZone {
+  margin: 57px 0 0 0;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea {
+  margin: 23px 0 0 0;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+  color: #ffffff;
+  font-family: rajdhaniRegular;
+  font-size: 42px;
+  text-align: start;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h3 {
+  font-family: rajdhaniRegular;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+  font-family: rajdhaniRegular;
+  font-size: 24px;
+}
+body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+  bottom: 0;
+  margin: 0 0 100px 8.9%;
+  position: absolute;
+}
+body .mainContainer section .news .contentArea .rightNews .orbit {
+  display: none;
+}
+@media (max-width: 250px) {
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock h3 {
+    font-size: 27px;
+  }
+}
+@media (max-width: 300px) {
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    font-size: 31px;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .news .contentArea .leftNews {
+    border-right: none;
+    width: 100%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link a {
+    margin-left: 0;
+    text-align: center;
+  }
+  body .mainContainer section .news .contentArea .leftNews .lineBottomPlanet {
+    display: none;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea {
+    display: none;
+  }
+  body .mainContainer section .news .contentArea .rightNews {
+    border-top: none;
+    position: relative;
+    width: 100%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+    margin: 0;
+    padding: 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    text-align: center;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h3 {
+    text-align: center;
+    width: 100%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+    text-align: center;
+    width: 100%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+    margin: 179px 0 0 0;
+    padding: 0;
+    position: relative;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  body .mainContainer section .news .headingNews {
+    width: 80% !important;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .news .contentArea .leftNews {
+    border-right: 1.25px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .linePadding {
+    padding-top: 95px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects {
+    padding-bottom: 95px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects .line {
+    height: 1.25px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link a {
+    font-size: 45px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .planet img {
+    height: auto;
+    width: 50%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text {
+    margin: 20px 0 0 10%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text h1 {
+    font-size: 80px;
+  }
+  body .mainContainer section .news .contentArea .rightNews {
+    border-top: 1.25px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+    margin: 125px 0 0 8.9%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .buttonZone {
+    margin: 71px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea {
+    margin: 28px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    font-size: 52px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+    font-size: 30px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+    margin: 0 0 125px 8.9%;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .news .contentArea .leftNews {
+    border-right: 1.56px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .linePadding {
+    padding-top: 118px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects {
+    padding-bottom: 118px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects .line {
+    height: 1.56px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link a {
+    font-size: 56px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .planet img {
+    height: auto;
+    width: 50%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text {
+    margin: 25px 0 0 10%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text h1 {
+    font-size: 100px;
+  }
+  body .mainContainer section .news .contentArea .rightNews {
+    border-top: 1.56px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+    margin: 156px 0 0 8.9%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .buttonZone {
+    margin: 88px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea {
+    margin: 35px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    font-size: 66px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+    font-size: 37px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+    margin: 0 0 156px 8.9%;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .news .contentArea .leftNews {
+    border-right: 1.95px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .linePadding {
+    padding-top: 148px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects {
+    padding-bottom: 148px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects .line {
+    height: 1.95px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link a {
+    font-size: 70px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .planet img {
+    height: auto;
+    width: 50%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text {
+    margin: 31px 0 0 10%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text h1 {
+    font-size: 125px;
+  }
+  body .mainContainer section .news .contentArea .rightNews {
+    border-top: 1.95px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+    margin: 195px 0 0 8.9%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .buttonZone {
+    margin: 110px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea {
+    margin: 43px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    font-size: 82px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+    font-size: 46px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+    margin: 0 0 195px 8.9%;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .news .contentArea .leftNews {
+    border-right: 2.43px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .linePadding {
+    padding-top: 185px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects {
+    padding-bottom: 185px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .lineProjects .line {
+    height: 2.43px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .block .link a {
+    font-size: 87px;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .planet img {
+    height: auto;
+    width: 50%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text {
+    margin: 38px 0 0 10%;
+  }
+  body .mainContainer section .news .contentArea .leftNews .planetArea .text h1 {
+    font-size: 156px;
+  }
+  body .mainContainer section .news .contentArea .rightNews {
+    border-top: 2.43px solid #ffffff;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock {
+    margin: 243px 0 0 8.9%;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .buttonZone {
+    margin: 137px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea {
+    margin: 53px 0 0 0;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h1 {
+    font-size: 102px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlock .infoBlockArea h4 {
+    font-size: 57px;
+  }
+  body .mainContainer section .news .contentArea .rightNews .newsContent .infoBlockBottom {
+    margin: 0 0 243px 8.9%;
+  }
+}
+body .mainContainer section .projects .imgInfo {
+  position: relative;
+}
+body .mainContainer section .projects .imgInfo .infoArea {
+  background: #15101b;
+  border-top-left-radius: 10px;
+  bottom: 0;
+  height: 890px;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton {
+  margin: 0 15px 0 82px;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton .bottom {
+  color: rgb(85, 83, 109);
+  margin: 38px 0 0 0;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement {
+  margin: 38px 0 0 0;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement .button {
+  border-color: #5fabf3;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement .button:hover {
+  border-color: #5fabf3;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+  color: #ffffff;
+  font-family: juraBold;
+  font-size: 39px;
+  margin: 28px 0 0 0;
+}
+body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+  color: #b590d8;
+  font-family: juraBold;
+  font-size: 27px;
+}
+body .mainContainer section .projects .imgInfo .infoAreaBottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 10px;
+  left: 0;
+}
+@media (max-width: 425px) {
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement .button .buttonArea {
+    padding: 22px 18px 22px 18px !important;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    font-size: 22px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .projects .imgInfo .infoArea {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton {
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    text-align: center;
+    width: 100%;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    text-align: center;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .projects .imgInfo .infoArea {
+    border-top-left-radius: 12.5px;
+    height: 750px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton {
+    margin: 0 18px 0 102px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .bottom {
+    margin: 47px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement {
+    margin: 47px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    font-size: 48px;
+    margin: 35px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    font-size: 33px;
+  }
+  body .mainContainer section .projects .imgInfo .infoAreaBottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 12.5px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .projects .imgInfo .infoArea {
+    border-top-left-radius: 15.6px;
+    height: 938px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton {
+    margin: 0 22px 0 127px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .bottom {
+    margin: 58px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement {
+    margin: 58px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    font-size: 60px;
+    margin: 43px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    font-size: 41px;
+  }
+  body .mainContainer section .projects .imgInfo .infoAreaBottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 15.6px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .projects .imgInfo .infoArea {
+    border-top-left-radius: 19.5px;
+    height: 1173px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton {
+    margin: 0 27px 0 159px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .bottom {
+    margin: 72px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement {
+    margin: 72px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    font-size: 75px;
+    margin: 53px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    font-size: 51px;
+  }
+  body .mainContainer section .projects .imgInfo .infoAreaBottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 19.5px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .projects .imgInfo .infoArea {
+    border-top-left-radius: 24.3px;
+    height: 1466px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton {
+    margin: 0 33px 0 199px;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .bottom {
+    margin: 90px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton .buttonElement {
+    margin: 90px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h2 {
+    font-size: 93px;
+    margin: 66px 0 0 0;
+  }
+  body .mainContainer section .projects .imgInfo .infoArea .textButton h4 {
+    font-size: 63px;
+  }
+  body .mainContainer section .projects .imgInfo .infoAreaBottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 24.3px;
+  }
+}
+body .mainContainer section .research {
+  margin: 0;
+  width: 100%;
+}
+body .mainContainer section .research .belowHeading {
+  width: 89%;
+}
+body .mainContainer section .research .belowHeading .block .atomImg {
+  height: auto;
+  width: 16.8%;
+}
+body .mainContainer section .research .belowHeading .block .computerImg {
+  height: auto;
+  width: 14.08%;
+}
+body .mainContainer section .research .belowHeading .block h3 {
+  font-family: rajdhaniRegular;
+  margin-top: 29px;
+  text-align: center;
+}
+body .mainContainer section .research .belowHeading .block h4 {
+  color: #ffffff;
+  font-family: blinkerRegular;
+  margin-top: 25px;
+  text-align: center;
+  width: 79.5%;
+}
+body .mainContainer section .research .belowHeading .block img {
+  height: auto;
+  width: 14.95%;
+}
+body .mainContainer section .research .belowHeading .block .line {
+  background: #b590d8;
+  height: 4px;
+  margin-top: 30px;
+  width: 19.9%;
+}
+@media (max-width: 650px) {
+  body .mainContainer section .research {
+    width: 95%;
+  }
+  body .mainContainer section .research .belowHeading {
+    width: 100%;
+  }
+}
+@media (min-width: 651px) and (max-width: 1600px) {
+  body .mainContainer section .research {
+    width: 80%;
+  }
+  body .mainContainer section .research .belowHeading {
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .research .belowHeading .block .atomImg {
+    margin-top: 143px;
+  }
+  body .mainContainer section .research .belowHeading .block .computerImg {
+    margin-top: 143px;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .research .belowHeading .block h3 {
+    margin-top: 36px;
+  }
+  body .mainContainer section .research .belowHeading .block h4 {
+    margin-top: 31px;
+  }
+  body .mainContainer section .research .belowHeading .block .line {
+    height: 5px;
+    margin-top: 37px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .research .belowHeading .block h3 {
+    margin-top: 45px;
+  }
+  body .mainContainer section .research .belowHeading .block h4 {
+    margin-top: 38px;
+  }
+  body .mainContainer section .research .belowHeading .block .line {
+    height: 6.2px;
+    margin-top: 46px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .research .belowHeading .block h3 {
+    margin-top: 56px;
+  }
+  body .mainContainer section .research .belowHeading .block h4 {
+    margin-top: 47px;
+  }
+  body .mainContainer section .research .belowHeading .block .line {
+    height: 7.7px;
+    margin-top: 57px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .research .belowHeading .block h3 {
+    margin-top: 70px;
+  }
+  body .mainContainer section .research .belowHeading .block h4 {
+    margin-top: 58px;
+  }
+  body .mainContainer section .research .belowHeading .block .line {
+    height: 9.6px;
+    margin-top: 71px;
+  }
+}
+body .mainContainer section .science {
+  margin: 0;
+  padding: 0;
+  width: 87%;
+}
+body .mainContainer section .science .infoCol .infoSection {
+  margin: 0 0 0 14%;
+}
+body .mainContainer section .science .infoCol .infoSection h4 {
+  color: #ffffff;
+  font-size: 27px;
+  margin-bottom: 36px;
+  margin-top: 10px;
+}
+body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+  color: #b590d8;
+  display: inline-block;
+  font-family: rajdhaniRegular;
+  font-size: 48px;
+  margin: 0;
+}
+body .mainContainer section .science .marsImg {
+  border-radius: 10px;
+}
+body .mainContainer section .science .projects {
+  margin: 108px 0 0 0;
+}
+body .mainContainer section .science .projects .block .blockContainer .firstImg {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+body .mainContainer section .science .projects .block .blockContainer img {
+  margin: 46px 0 0 0;
+}
+body .mainContainer section .science .projects .block .blockContainer .info h4 {
+  color: #ffffff;
+}
+body .mainContainer section .science .projects .block .blockContainer .info h5 {
+  color: #ffffff;
+}
+body .mainContainer section .science .projects .block .blockContainer .lastImg {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+  width: 283px;
+}
+@media (max-width: 300px) {
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+    font-size: 39px;
+  }
+}
+@media (max-width: 400px) {
+  body .mainContainer section .science .projects .block .blockContainer img {
+    margin-top: 15px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .info {
+    margin: 0;
+    padding: 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  body .mainContainer section .science .projects .block {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .science .projects .block .blockContainer {
+    width: 90%;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .plus {
+    display: block;
+  }
+  body .mainContainer section .science .projects .blockMargin {
+    margin-top: 104px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1400px) {
+  body .mainContainer section .science .projects .block {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .science .projects .block .blockContainer {
+    width: 50%;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .plus {
+    display: block;
+  }
+  body .mainContainer section .science .projects .blockMargin {
+    margin-top: 104px;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer section .science {
+    width: 100%;
+  }
+  body .mainContainer section .science .infoCol {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .science .infoCol .infoSection {
+    margin: 0;
+    width: 87%;
+  }
+  body .mainContainer section .science .infoCol .infoSection .buttonElement {
+    margin-top: 36px;
+  }
+  body .mainContainer section .science .infoCol .infoSection h4 {
+    margin-top: 10px;
+    text-align: center;
+  }
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer section .science .marsImg {
+    margin-top: 109px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1775px) {
+  body .mainContainer section .science .projects .block .blockContainer .info h4 span {
+    display: none;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 195px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .plus {
+    display: block;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2075px) {
+  body .mainContainer section .science .projects .block .blockContainer .info h4 span {
+    display: none;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 242px;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .science .infoCol .infoSection h4 {
+    font-size: 33px;
+    margin-bottom: 45px;
+    margin-top: 12.5px;
+  }
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+    font-size: 60px;
+  }
+  body .mainContainer section .science .marsImg {
+    border-radius: 12.5px;
+  }
+  body .mainContainer section .science .projects {
+    margin: 135px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .firstImg {
+    border-bottom-left-radius: 12.5px;
+    border-top-left-radius: 12.5px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer img {
+    margin: 57px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .lastImg {
+    border-bottom-left-radius: 12.5px;
+    border-top-left-radius: 12.5px;
+  }
+}
+@media (min-width: 2076px) and (max-width: 2400px) {
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 348px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 2594px) {
+  body .mainContainer section .science .projects .block .blockContainer .info h4 span {
+    display: none;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 303px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .science .infoCol .infoSection h4 {
+    font-size: 41px;
+    margin-bottom: 56px;
+    margin-top: 15.6px;
+  }
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+    font-size: 75px;
+  }
+  body .mainContainer section .science .marsImg {
+    border-radius: 15.6px;
+  }
+  body .mainContainer section .science .projects {
+    margin: 169px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .firstImg {
+    border-bottom-left-radius: 15.6px;
+    border-top-left-radius: 15.6px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer img {
+    margin: 71px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .lastImg {
+    border-bottom-left-radius: 15.6px;
+    border-top-left-radius: 15.6px;
+  }
+}
+@media (min-width: 2595px) and (max-width: 3000px) {
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 435px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3243px) {
+  body .mainContainer section .science .projects .block .blockContainer .info h4 span {
+    display: none;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 379px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .science .infoCol .infoSection h4 {
+    font-size: 51px;
+    margin-bottom: 70px;
+    margin-top: 19.5px;
+  }
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+    font-size: 93px;
+  }
+  body .mainContainer section .science .marsImg {
+    border-radius: 19.5px;
+  }
+  body .mainContainer section .science .projects {
+    margin: 211px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .firstImg {
+    border-bottom-left-radius: 19.5px;
+    border-top-left-radius: 19.5px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer img {
+    margin: 85px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .lastImg {
+    border-bottom-left-radius: 19.5px;
+    border-top-left-radius: 19.5px;
+  }
+}
+@media (min-width: 3244px) and (max-width: 3750px) {
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 544px;
+  }
+}
+@media (min-width: 3751px) and (max-width: 4054px) {
+  body .mainContainer section .science .projects .block .blockContainer .info h4 span {
+    display: none;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 474px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .science .infoCol .infoSection h4 {
+    font-size: 63px;
+    margin-bottom: 87px;
+    margin-top: 24.3px;
+  }
+  body .mainContainer section .science .infoCol .infoSection .scienceHeading h1 {
+    font-size: 116px;
+  }
+  body .mainContainer section .science .marsImg {
+    border-radius: 24.3px;
+  }
+  body .mainContainer section .science .projects {
+    margin: 264px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .firstImg {
+    border-bottom-left-radius: 24.3px;
+    border-top-left-radius: 24.3px;
+  }
+  body .mainContainer section .science .projects .block .blockContainer img {
+    margin: 106px 0 0 0;
+  }
+  body .mainContainer section .science .projects .block .blockContainer .lastImg {
+    border-bottom-left-radius: 24.3px;
+    border-top-left-radius: 24.3px;
+  }
+}
+@media (min-width: 4055px) {
+  body .mainContainer section .science .projects .block .blockContainer .plusAndLine .lineScience {
+    width: 680px;
+  }
+}
+body .mainContainer section .info {
+  margin-left: 60px;
+}
+body .mainContainer section .info h5 {
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .plusAndLine {
+  margin: 7px 0 0 0;
+}
+body .mainContainer section .plusAndLine .lineZone {
+  background: #ffffff;
+  bottom: 13.5px;
+  height: 1px;
+  left: 60px;
+  position: relative;
+  width: calc(100% - 60px);
+}
+body .mainContainer section .plusAndLine .plus {
+  bottom: 12.5px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body .mainContainer section .plusAndLine .plus .horizontal {
+  background: #ffffff;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 25px;
+}
+body .mainContainer section .plusAndLine .plus .vertical {
+  background: #ffffff;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 25px;
+}
+body .mainContainer section .sectionContent {
+  background: #0a0016;
+  padding-bottom: 132px;
+}
+body .mainContainer section .sectionContent .buttonElement .button {
+  border: 0.5px solid #5fabf3;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+body .mainContainer section .sectionContent .buttonElement .button:hover {
+  border-color: #b590d8;
+}
+body .mainContainer section .sectionContent .buttonElement .button .buttonArea {
+  align-items: center;
+  display: flex;
+  padding: 31px 25px 31px 25px;
+}
+body .mainContainer section .sectionContent .buttonElement .button .buttonArea a {
+  color: #ffffff;
+  display: inline-block;
+  font-family: rajdhaniRegular;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+body .mainContainer section .sectionContent .buttonElement .button .buttonArea a:hover {
+  color: #ffffff;
+}
+body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img {
+  display: inline-block;
+  margin: 0 0 0 47px;
+}
+body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img img {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: 35px;
+}
+body .mainContainer section .sectionContent .contentArea {
+  margin-top: 160px;
+}
+body .mainContainer section .sectionContent .headingLine {
+  background: #b590d8;
+  height: 3px;
+  margin-top: 11px;
+  width: 50px;
+}
+body .mainContainer section .sectionContent .headingWidth {
+  width: 68.75%;
+}
+@media (max-width: 650px) {
+  body .mainContainer .sectionContent .buttonElement .button .buttonArea {
+    padding: 25px 20px 25px 20px !important;
+  }
+  body .mainContainer .sectionContent .buttonElement .button .buttonArea a {
+    font-size: 24px !important;
+  }
+}
+@media (min-width: 651px) and (max-width: 1600px) {
+  body .mainContainer section .sectionContent .headingWidth {
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer .infoLine {
+    top: 0;
+  }
+  body .mainContainer .infoLine h4 {
+    text-align: center;
+  }
+  body .mainContainer .infoLine h5 {
+    text-align: center;
+  }
+  body .mainContainer .infoLine .line {
+    display: none;
+  }
+  body .mainContainer .plus {
+    display: none;
+  }
+  body .mainContainer .sectionContent .buttonElement {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer .sectionContent .heading {
+    display: flex;
+    justify-content: center;
+  }
+  body .mainContainer .sectionContent .heading h3 {
+    text-align: center;
+  }
+  body .mainContainer .sectionContent .headingLineArea {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+  body .mainContainer .infoLine {
+    top: 0;
+  }
+  body .mainContainer .infoLine h4 {
+    text-align: center;
+  }
+  body .mainContainer .infoLine h5 {
+    text-align: center;
+  }
+  body .mainContainer .plus {
+    display: none;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .mainContainer section .info {
+    margin-left: 75px;
+  }
+  body .mainContainer section .plusAndLine {
+    margin: 8.7px 0 0 0;
+  }
+  body .mainContainer section .plusAndLine .lineZone {
+    bottom: 16.9px;
+    height: 1.25px;
+    left: 75px;
+    width: calc(100% - 75px);
+  }
+  body .mainContainer section .plusAndLine .plus {
+    bottom: 15.6px;
+    height: 31px;
+    left: 15px;
+    position: relative;
+  }
+  body .mainContainer section .plusAndLine .plus .horizontal {
+    height: 1.25px;
+    width: 31px;
+  }
+  body .mainContainer section .plusAndLine .plus .vertical {
+    height: 1.25px;
+    width: 31px;
+  }
+  body .mainContainer section .sectionContent {
+    padding-bottom: 165px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button {
+    border: 0.62px solid #ffffff;
+    border-radius: 7.5px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea {
+    padding: 47px 38px 47px 38px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea a {
+    font-size: 37px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img {
+    margin: 0 0 0 72px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img img {
+    height: auto;
+    width: 43px;
+  }
+  body .mainContainer section .sectionContent .contentArea {
+    margin-top: 200px;
+  }
+  body .mainContainer section .sectionContent .headingLine {
+    height: 3.7px;
+    margin-top: 13px;
+    width: 62px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .mainContainer section .info {
+    margin-left: 93px;
+  }
+  body .mainContainer section .plusAndLine {
+    margin: 10.8px 0 0 0;
+  }
+  body .mainContainer section .plusAndLine .lineZone {
+    bottom: 21.1px;
+    height: 1.56px;
+    left: 93px;
+    width: calc(100% - 93px);
+  }
+  body .mainContainer section .plusAndLine .plus {
+    bottom: 19.5px;
+    height: 38px;
+    left: 18px;
+    position: relative;
+  }
+  body .mainContainer section .plusAndLine .plus .horizontal {
+    height: 1.56px;
+    width: 38px;
+  }
+  body .mainContainer section .plusAndLine .plus .vertical {
+    height: 1.56px;
+    width: 38px;
+  }
+  body .mainContainer section .sectionContent {
+    padding-bottom: 206px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button {
+    border: 0.77px solid #ffffff;
+    border-radius: 9.3px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea {
+    padding: 58px 47px 58px 47px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea a {
+    font-size: 46px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img {
+    margin: 0 0 0 90px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img img {
+    height: auto;
+    width: 53px;
+  }
+  body .mainContainer section .sectionContent .contentArea {
+    margin-top: 250px;
+  }
+  body .mainContainer section .sectionContent .headingLine {
+    height: 4.6px;
+    margin-top: 16px;
+    width: 77px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .mainContainer section .info {
+    margin-left: 116px;
+  }
+  body .mainContainer section .plusAndLine {
+    margin: 13.5px 0 0 0;
+  }
+  body .mainContainer section .plusAndLine .lineZone {
+    bottom: 26.4px;
+    height: 1.95px;
+    left: 116px;
+    width: calc(100% - 116px);
+  }
+  body .mainContainer section .plusAndLine .plus {
+    bottom: 24.3px;
+    height: 47px;
+    left: 22px;
+    position: relative;
+  }
+  body .mainContainer section .plusAndLine .plus .horizontal {
+    height: 1.95px;
+    width: 47px;
+  }
+  body .mainContainer section .plusAndLine .plus .vertical {
+    height: 1.95px;
+    width: 47px;
+  }
+  body .mainContainer section .sectionContent {
+    padding-bottom: 258px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button {
+    border: 0.96px solid #ffffff;
+    border-radius: 11.6px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea {
+    padding: 72px 58px 72px 58px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea a {
+    font-size: 57px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img {
+    margin: 0 0 0 112px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img img {
+    height: auto;
+    width: 66px;
+  }
+  body .mainContainer section .sectionContent .contentArea {
+    margin-top: 312px;
+  }
+  body .mainContainer section .sectionContent .headingLine {
+    height: 5.7px;
+    margin-top: 20px;
+    width: 96px;
+  }
+}
+@media (min-width: 3751px) {
+  body .mainContainer section .info {
+    margin-left: 145px;
+  }
+  body .mainContainer section .plusAndLine {
+    margin: 16.9px 0 0 0;
+  }
+  body .mainContainer section .plusAndLine .lineZone {
+    bottom: 33px;
+    height: 2.43px;
+    left: 145px;
+    width: calc(100% - 145px);
+  }
+  body .mainContainer section .plusAndLine .plus {
+    bottom: 30.4px;
+    height: 58px;
+    left: 27px;
+    position: relative;
+  }
+  body .mainContainer section .plusAndLine .plus .horizontal {
+    height: 2.43px;
+    width: 58px;
+  }
+  body .mainContainer section .plusAndLine .plus .vertical {
+    height: 2.43px;
+    width: 58px;
+  }
+  body .mainContainer section .sectionContent {
+    padding-bottom: 323px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button {
+    border: 1.2px solid #ffffff;
+    border-radius: 14.5px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea {
+    padding: 90px 72px 90px 72px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea a {
+    font-size: 71px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img {
+    margin: 0 0 0 140px;
+  }
+  body .mainContainer section .sectionContent .buttonElement .button .buttonArea .img img {
+    height: auto;
+    width: 82px;
+  }
+  body .mainContainer section .sectionContent .contentArea {
+    margin-top: 390px;
+  }
+  body .mainContainer section .sectionContent .headingLine {
+    height: 7.1px;
+    margin-top: 25px;
+    width: 120px;
+  }
+}
+body .mainContainer .newsSection {
+  background: #0a0016;
+}
+body .mainContainer .newsSection .newsArea .newsContent {
+  width: 83%;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+  margin: 75px 0 75px 0;
+  width: 90%;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+  color: #ffffff;
+  font-family: rajdhaniRegular;
+  font-size: 32px;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews .smallerDevices {
+  color: #ffffff;
+  display: none;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+  font-size: 39px;
+  margin: 0;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textInfo .date span {
+  font-size: 20px;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+  font-family: rajdhaniRegular;
+  font-size: 52px;
+  margin: 0 0 26px 0;
+  padding: 0;
+  text-align: initial;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+  color: #ffffff;
+  font-family: rajdhaniBold;
+  font-size: 29px;
+  margin: 0 0 22px 0;
+}
+body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+  background: #ffffff;
+  height: 1px;
+  margin: 0 0 46px 0;
+  width: 85%;
+}
+body .mainContainer .newsSection .newsArea .topArea img {
+  height: auto;
+  width: 100%;
+}
+body .mainContainer .sectionContent {
+  padding-top: 132px;
+}
+
+@media (max-width: 275px) {
+  body .mainContainer .newsSection .newsArea .newsContent {
+    width: 91%;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    font-size: 47px;
+  }
+}
+@media (max-width: 1400px) {
+  body .mainContainer .newsSection .newsArea .newsContent {
+    width: 91%;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+    width: 100%;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    text-align: center;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews .smallerDevices {
+    display: block;
+    margin: 40px 0 0 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+    margin: 57px 0 0 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    margin: 28px 0 0 0;
+    text-align: center;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+    margin: 75px 0 0 0;
+    text-align: center;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+    margin: 32px 0 0 0;
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body h1 {
+    font-size: 180px;
+    margin-top: 18px;
+  }
+  body h2 {
+    font-size: 45px;
+  }
+  body h3 {
+    font-size: 37px;
+  }
+  body h4 {
+    font-size: 32px;
+  }
+  body h5 {
+    font-size: 26px;
+  }
+  body .htmlLoader .container .ring {
+    height: 250px;
+    width: 250px;
+  }
+  body .htmlLoader .container .ring:nth-child(1) {
+    border-bottom-width: 10px;
+  }
+  body .htmlLoader .container .ring:nth-child(2) {
+    border-right-width: 10px;
+  }
+  body .htmlLoader .container .ring:nth-child(3) {
+    border-top-width: 10px;
+  }
+  body .htmlLoader .container .scientisText {
+    font-size: 20px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+    margin: 93px 0 93px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    font-size: 40px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+    font-size: 48px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date span {
+    font-size: 25px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    font-size: 65px;
+    margin: 0 0 32px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+    font-size: 36px;
+    margin: 0 0 27px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+    height: 1.01px;
+    margin: 0 0 57px 0;
+  }
+  body .mainContainer .sectionContent {
+    padding-top: 165px;
+  }
+}
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body h1 {
+    font-size: 225px;
+    margin-top: 22px;
+  }
+  body h2 {
+    font-size: 56px;
+  }
+  body h3 {
+    font-size: 46px;
+  }
+  body h4 {
+    font-size: 40px;
+  }
+  body h5 {
+    font-size: 32px;
+  }
+  body .htmlLoader .container .ring {
+    height: 312px;
+    width: 312px;
+  }
+  body .htmlLoader .container .ring:nth-child(1) {
+    border-bottom-width: 12.5px;
+  }
+  body .htmlLoader .container .ring:nth-child(2) {
+    border-right-width: 12.5px;
+  }
+  body .htmlLoader .container .ring:nth-child(3) {
+    border-top-width: 12.5px;
+  }
+  body .htmlLoader .container .scientisText {
+    font-size: 25px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+    margin: 116px 0 116px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    font-size: 50px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+    font-size: 60px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date span {
+    font-size: 31px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    font-size: 81px;
+    margin: 0 0 40px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+    font-size: 45px;
+    margin: 0 0 33px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+    height: 1.26px;
+    margin: 0 0 71px 0;
+  }
+  body .mainContainer .sectionContent {
+    padding-top: 206px;
+  }
+}
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body h1 {
+    font-size: 281px;
+    margin-top: 27px;
+  }
+  body h2 {
+    font-size: 70px;
+  }
+  body h3 {
+    font-size: 57px;
+  }
+  body h4 {
+    font-size: 50px;
+  }
+  body h5 {
+    font-size: 40px;
+  }
+  body .htmlLoader .container .ring {
+    height: 390px;
+    width: 390px;
+  }
+  body .htmlLoader .container .ring:nth-child(1) {
+    border-bottom-width: 15.6px;
+  }
+  body .htmlLoader .container .ring:nth-child(2) {
+    border-right-width: 15.6px;
+  }
+  body .htmlLoader .container .ring:nth-child(3) {
+    border-top-width: 15.6px;
+  }
+  body .htmlLoader .container .scientisText {
+    font-size: 31px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+    margin: 145px 0 145px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    font-size: 62px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+    font-size: 75px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date span {
+    font-size: 38px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    font-size: 101px;
+    margin: 0 0 50px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+    font-size: 56px;
+    margin: 0 0 41px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+    height: 1.57px;
+    margin: 0 0 88px 0;
+  }
+  body .mainContainer .sectionContent {
+    padding-top: 258px;
+  }
+}
+@media (min-width: 3751px) {
+  body h1 {
+    font-size: 351px;
+    margin-top: 33px;
+  }
+  body h2 {
+    font-size: 87px;
+  }
+  body h3 {
+    font-size: 71px;
+  }
+  body h4 {
+    font-size: 62px;
+  }
+  body h5 {
+    font-size: 50px;
+  }
+  body .htmlLoader .container .ring {
+    height: 488px;
+    width: 488px;
+  }
+  body .htmlLoader .container .ring:nth-child(1) {
+    border-bottom-width: 19.5px;
+  }
+  body .htmlLoader .container .ring:nth-child(2) {
+    border-right-width: 19.5px;
+  }
+  body .htmlLoader .container .ring:nth-child(3) {
+    border-top-width: 19.5px;
+  }
+  body .htmlLoader .container .scientisText {
+    font-size: 38px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews {
+    margin: 181px 0 181px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textContainer .textNews h2 {
+    font-size: 77px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date {
+    font-size: 93px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .date span {
+    font-size: 47px;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h1 {
+    font-size: 126px;
+    margin: 0 0 62px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo h2 {
+    font-size: 70px;
+    margin: 0 0 51px 0;
+  }
+  body .mainContainer .newsSection .newsArea .newsContent .textInfo .newsLine {
+    height: 1.96px;
+    margin: 0 0 110px 0;
+  }
+  body .mainContainer .sectionContent {
+    padding-top: 323px;
+  }
+}/*# sourceMappingURL=style.css.map */
